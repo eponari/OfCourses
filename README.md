@@ -11,5 +11,5 @@ This is a Software Engineering Project created by 6 Epoka University students. T
 For this project, the technologies used will be:
 
 - PHP (Backend Language)
-- HTML, CSS, Javascript, Bootstrap (Fornd-End Language and Frameworks)
-- mySQL (SQL langauge)
+- HTML, CSS, Javascript, Bootstrap (Front-End Language and Frameworks)
+- MySQL (SQL langauge)
