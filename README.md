@@ -8,7 +8,7 @@ This is a Software Engineering Project created by 6 Epoka University students. T
 
 ## Technologies
 
-For this project, the technologies that will be used:
+For this project, the technologies that will be used are:
 
 - PHP (Backend Language)
 - HTML, CSS, Javascript, Bootstrap (Front-End Language and Frameworks)
