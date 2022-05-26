@@ -2,23 +2,21 @@
     <head>
         <title>Login</title>
             <link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+            <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
     </head>
     <body>
         <div class="loginbox"> 
             <img src="images/avatar.png" class="avatar">
             <h1>Login Here</h1>
-            <form>
-                <p>Username</p>
-                <input type="text" name="" placeholder="Enter Username">
+            <form action="Controller/login.php" method="POST">
+                <p>Email</p>
+                <input type="text" name="email" placeholder="Enter Email">
                 <p>Password</p>
-                <input type="password" name="" placeholder="Enter Password">
-                <input type="submit" name="" value="Login">
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="submit" name="submit" value="Login">
                 <!-- <a href="#">Lost your password?</a><br> -->
-                <a href="#">Don't have an account?</a>
-
+                <a href="signup.php">Don't have an account?</a>
             </form>
-
-        </div>
-        
+        </div>     
     </body>
 </html>
