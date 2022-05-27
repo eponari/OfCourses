@@ -10,7 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Template Main CSS File -->
-  <link href="css/indexStyle.css" rel="stylesheet">
+  <link href="css/navbarStyle.css" rel="stylesheet">
+  <link href="css/styleIndex.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
