@@ -1,0 +1,67 @@
+h2 {
+    text-align: center;
+}
+
+
+h3 {
+    
+    text-align: center;
+    font-size: 16px;
+}
+
+.container-two {
+    padding-top: 1px;
+}
+
+h3 .container-two {
+    width: 3%;
+}
+
+label, p {
+    text-decoration: underline;
+    color: black;
+    text-align: left;
+}
+
+form {
+    
+    text-align: left;
+}
+
+
+fieldset {
+    box-shadow:0 6px 13px rgba(78, 10, 91, 0.97);
+    float: center;
+    display: block;
+    margin-left: 400px;
+    margin-right: 370px;
+    padding-top: 0.99em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+  }
+
+  @media screen and (max-width: 750px) {
+    .navbar {position: fixed;}
+    
+    .searchBtn {
+        display: none;
+    }
+
+    
+
+    fieldset {
+        
+        display: block;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: 2px groove (internal value);
+      }
+
+    
+  }
