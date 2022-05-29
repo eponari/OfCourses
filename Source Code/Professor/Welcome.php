@@ -35,24 +35,9 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  
-      <div class="container">
-        <nav class="navbar">
-        <div class="container-fluid">
-        
-            <a class="button" href="professorIndex.html">OfCourses</a>
-           
-            <a class="btn" href="../Utility/logout.php">Log Out</a></li>
-            <a class="btn" href="myProfile.html">My Profile</a></li>
-            <a class="btn" href="askTheProfessor.html">Ask the Professor</a></li>
-            <a class="btn" href="manageCourses.html">Manage Courses</a></li>         
-        </div>
-       
-      </div>
-    </nav>
-  </header>
-  <!-- End Header -->
+    <?php
+      include("../Utility/professorHeader.php");
+    ?>
 
  
     <img src="../images/profImage.jpg" class="container-one">
