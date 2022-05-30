@@ -26,6 +26,7 @@
 
 <?php
     include("../Utility/studentHeader.php");
+    include("../Controller/studentLanding.php");
   ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
@@ -39,11 +40,10 @@
 
             <div class="flex-container">
 
-              <h3> Choose your categories: 
-              </h3>
+              <h3> Choose your categories: </h3>
  
                 <div class="border">
-                  
+
                   <label class="form"> 
                   <input type="checkbox" name="checkbox"/>Engineering </label>
                   <label class="form"> <br>
@@ -51,10 +51,7 @@
                   <label class="form"> <br>
                   <input type="checkbox" name="checkbox"/>Graphic Design </label>
                   <label class="form"> <br>
-                    <input type="checkbox" name="checkbox"/>Animation and Computer Graphics </label>
-                  
-                  
-                 
+                  <input type="checkbox" name="checkbox"/>Animation and Computer Graphics </label>
                 </div>
 
 
@@ -67,8 +64,7 @@
                     <label class="form"> <br>
                     <input type="checkbox" name="checkbox"/>Business Informatics </label>
                     <label class="form"> <br>
-                      <input type="checkbox" name="checkbox"/>Cyber </label>
-                    
+                    <input type="checkbox" name="checkbox"/>Cyber </label>
 
                 </div>
 
@@ -128,18 +124,20 @@
       <h6> Courses picked out for you: 
       </h6>
 
+
+      <?php
+      foreach ($courses as $courses) {?>
         <div class="borderElse">
-         
-         <h4><a href="" class="stretched-link">Computer Graphics Design.</a></h4>
-        <p> Introduction to two-dimensional and
-          <br> three-dimensional graphics along 
-          <br> with image processing. </p>
-        </p>
+        <h4><a href="" class="stretched-link"><?php echo $courses['id']; echo "  "; echo $courses['name']?></a></h4>
+        <?php echo $courses['description'];?></p>
+        <h5><br><?php echo "From: "; echo $courses['startDate'];?> <br> <h5> <?php echo "To: "; echo $courses['endDate']; ?> </h5>
         <a class="btnExtra" href="registerCourse.html">Register</a>
-        <h5> Beginner. 7 months. </h5>
-        
+
        </div>
-       <div class="border">
+       <?php } ?>
+
+
+       <!-- <div class="border">
          <h4><a href="" class="stretched-link">Fundamentals of Data Strctures.</a></h4>
          <p>Learn about the types of data structures
            <br> and how they are arranged with 
@@ -165,15 +163,9 @@
           <a class="btnExtra" href="registerCourse.html">Register</a>
           <h5> Intermediate. 1-3 months. </h5>
         </p>
-      </div>
-
-       
-
+      </div> -->
     </div>
-
-     
-     </div>
-
+      </div>
   </div>
 
     </body>
