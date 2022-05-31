@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+}
+
+fieldset {
+    box-shadow:0 6px 13px rgba(78, 10, 91, 0.97);
+    margin-right: 220px;
+}
+
+h3 {
+    padding-bottom: 48px;
+}
+
+h3, h6 {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 15px;
+    color: rgb(66, 9, 76);
+}
+
+
+textarea {
+    float: center;
+    
+}
+
+
