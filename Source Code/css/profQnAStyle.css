@@ -40,6 +40,7 @@ body {
       margin-left: 20px;
       margin:5px;
       border-radius: 5px;
+      align-content: center;
 }
 
 .btnExtra:hover {
@@ -131,6 +132,7 @@ h1, h2, h3, h6 {
     flex-wrap: wrap;
     background-color: rgb(250, 250, 248);
     margin-top: 0px;
+    align-content: center;
 }
 
 .flex-container > div {
@@ -140,7 +142,9 @@ h1, h2, h3, h6 {
     padding: 20px;
     font-size: 13px;
     color: black;
-    
+}
+.flex-container > .btnExtra{
+    left: 50%;
 }
 
 
