@@ -25,4 +25,39 @@
         }
     }
 
+    $courseName = $coursesRepo -> getCourseName();
+
+    if($courseName){
+        foreach($courseName as $course){
+            $id = $course['id'];
+            $name = $course['name'];
+        }
+    }
+
+    $weekNumber = $coursesRepo -> getCurrentWeek();
+
+    if($weekNumber){
+        foreach($weekNumber as $week){
+            $weekNr = $week['weekNr'];
+            $weekTitle = $week['title'];
+        }
+    }
+
+    $status = $coursesRepo -> getStatus();
+
+    if($status){
+        foreach($status as $status){
+            
+        }
+    }
+
+    $grade = $coursesRepo -> getGrade();
+
+    if($grade){
+        foreach($grade as $grade){
+
+        }
+    }
+
+
 ?>

@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = '';
-    $database = "ofcoursesdb";
+    $database = "ofcourses";
     // $username = 'eponari19';
     // $password='ep908ari';
     // $database = 'web22_eponari19';
