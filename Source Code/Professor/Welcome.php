@@ -49,12 +49,12 @@
 
   <main id="main">
 
-       <h4> Current Courses:
+       <!-- <h4> Current Courses:
         <br> <a class="buttonExtra" href="categories.html">Browse through categories</a>
-       </h4>
+       </h4> -->
       
     
-    <div class="flex-container">
+    <!-- <div class="flex-container">
 
       <div class="border">
         
@@ -67,125 +67,7 @@
        <a class="btnExtra" href="deleteCourse.html">Delete</a>
        <h5> 120 enrolled students </h5>
       </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Web Design Development.</a></h4>
-        <p>Learn how to use HTML, CSS, Javascript
-          <br> and PHP to build a website
-          <br> from scratch. 
-        </p>
-        <a class="btnExtra" href="deleteCourse.html">Delete</a>
-        <h5> 131 enrolled students </h5>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Media Design.</a></h4>
-        <p> The objective of the course is to provide 
-          <br> thestudents with an overview of the most 
-          <br> relevant tools, materials, mechanics and
-          <br> strategies of media design. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 119 enrolled students </h5>
-        </p>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">C++ Programming</a></h4>
-        <p>This course will start with the fundamental  
-          <br> programming concepts before digging deeper  
-          <br> into the more advanced C++ topics. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 109 enrolled students </h5>
-        </p>
-      </div>
-
-      <div class="border">
-        
-        <h4><a href="" class="stretched-link">Object Oriented Programming</a></h4>
-       <p> Introduction to OOP with JAVA as a programming 
-         <br> language. This course teaches from JAVA 
-         <br> fundamentals to System Design and creating 
-         <br> large-scale systems. </p>
-       </p>
-       <a class="btnExtra" href="deleteCourse.html">Delete</a>
-       <h5> 120 enrolled students </h5>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Web Design Development.</a></h4>
-        <p>Learn how to use HTML, CSS, Javascript
-          <br> and PHP to build a website
-          <br> from scratch. 
-        </p>
-        <a class="btnExtra" href="deleteCourse.html">Delete</a>
-        <h5> 131 enrolled students </h5>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Media Design.</a></h4>
-        <p> The objective of the course is to provide 
-          <br> thestudents with an overview of the most 
-          <br> relevant tools, materials, mechanics and
-          <br> strategies of media design. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 119 enrolled students </h5>
-        </p>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">C++ Programming</a></h4>
-        <p>This course will start with the fundamental  
-          <br> programming concepts before digging deeper  
-          <br> into the more advanced C++ topics. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 109 enrolled students </h5>
-        </p>
-      </div>
-
-      <div class="border">
-        
-        <h4><a href="" class="stretched-link">Object Oriented Programming</a></h4>
-       <p> Introduction to OOP with JAVA as a programming 
-         <br> language. This course teaches from JAVA 
-         <br> fundamentals to System Design and creating 
-         <br> large-scale systems. </p>
-       </p>
-       <a class="btnExtra" href="deleteCourse.html">Delete</a>
-       <h5> 120 enrolled students </h5>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Web Design Development.</a></h4>
-        <p>Learn how to use HTML, CSS, Javascript
-          <br> and PHP to build a website
-          <br> from scratch. 
-        </p>
-        <a class="btnExtra" href="deleteCourse.html">Delete</a>
-        <h5> 131 enrolled students </h5>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">Media Design.</a></h4>
-        <p> The objective of the course is to provide 
-          <br> thestudents with an overview of the most 
-          <br> relevant tools, materials, mechanics and
-          <br> strategies of media design. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 119 enrolled students </h5>
-        </p>
-      </div>
-
-      <div class="border">
-        <h4><a href="" class="stretched-link">C++ Programming</a></h4>
-        <p>This course will start with the fundamental  
-          <br> programming concepts before digging deeper  
-          <br> into the more advanced C++ topics. </p>
-          <a class="btnExtra" href="deleteCourse.html">Delete</a>
-          <h5> 109 enrolled students </h5>
-        </p>
-      </div>
-
-    </div>
+    </div> -->
 
 
 
