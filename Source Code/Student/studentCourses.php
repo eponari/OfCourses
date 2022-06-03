@@ -10,9 +10,9 @@
   <meta content="" name="keywords">
 
   <!-- Template Main CSS File -->
-  <link href="navbarStyle.css" rel="stylesheet">
-  <link href="studentStyle.css" rel="stylesheet">
-  <link href="studentCourseStyle.css" rel="stylesheet">
+  <link href="../css/navbarStyle.css" rel="stylesheet">
+  <link href="../css/studentStyle.css" rel="stylesheet">
+  <link href="../css/studentCourseStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -162,25 +162,16 @@
     <h4><a href="" class="stretched-link"><?php echo $courses['id']; echo " "; echo $courses['name']; ?></a> </h4>
 
     <?php 
-    foreach((array)$weekNumber as $week){ ?>
-      <p style="color: gray;"> Weeks 14: <?php echo $week['weekNr']; echo " "; echo $week['title']; ?> </p>
-      <?php
-    }
+    echo "<p style='color: gray;'> Weeks 14: {$week['weekNr']}</p>";
     ?>
 
 
     <?php
-    foreach($status as $status){?>
-      <p> Status of the course:<p style="padding:10px; background-color: rgb(63, 156, 63); font-weight: bold;"> <?php echo $status; ?> </p>
-   </p><?php
-    }
+      echo "<p> Status of the course:<p style='padding:10px; background-color: rgb(63, 156, 63); font-weight: bold;'> <?php echo $status; ?> </p>";
     ?>
 
     <?php
-    foreach($grade as $grade){?>
-      <h5><span> CGPA: <?php echo $grade['grade'];?> </h5> </span>
-      <?php
-    }
+      echo "<h5><span> CGPA: {$grade['grade']} </h5> </span>";
     ?>
 
 

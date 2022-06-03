@@ -7,7 +7,7 @@
            
             <a class="btn" href="../Utility/logout.php">Log Out</a>
             <a class="btn" href="../Utility/myAccount.php">My Account</a>
-            <a class="btn" href="myCourses.html">My Courses</a></li>
+            <a class="btn" href="../Student/studentCourses.php">My Courses</a></li>
          
         </div>
     </nav>   
