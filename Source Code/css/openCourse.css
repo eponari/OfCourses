@@ -1,0 +1,14 @@
+p {
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+h2 {
+    text-decoration: none;
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid;
+  }
