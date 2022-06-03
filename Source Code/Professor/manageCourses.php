@@ -29,7 +29,7 @@
 
   <main id="main">
 
-       <h4> <a class="buttonExtra" href="categories.html">Add New Course</a>
+       <h4> <a class="buttonExtra" href="addCourse.php">Add New Course</a>
        </h4>
       
     

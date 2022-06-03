@@ -25,10 +25,10 @@
         <div class="container-fluid">
           
         
-            <a class="button" href="indexPage.html">OfCourses</a>
+            <a class="button" href="index.php">OfCourses</a>
            
-            <a class="btn" href="indexPage.html#contactUs">Contact Us</a>
-            <a class="btn" href="indexPage.html#about">About</a>
+            <a class="btn" href="index.php#contactUs">Contact Us</a>
+            <a class="btn" href="index.php#about">About</a>
             <a class="btn" href="signup.php">Sign Up</a></li>
             <a class="btn" href="login.php">Log In</a></li>
         </div>
@@ -103,11 +103,11 @@
       </div>
     </div>
 
-   <section id="about" class="about">
+   <section id="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>About Us.</h2>
+          <h2 class="about">About Us.</h2>
           <h3 class="pt-0 pt-lg-5" style=" font-size: 15px; text-decoration: underline; text-align: center;">Get to know our team members better!</h3>
 
           <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
