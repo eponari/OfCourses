@@ -27,9 +27,10 @@
           
         
             <a class="button" href="studentLanding.html">OfCourses</a>
+           
+            <a class="btn" href="logOut.html">Log Out</a>
             <a class="btn" href="studentLanding.html">Home</a>
-            <a class="btn" href="myCourses.html">My Courses</a>    
-            <a class="btn" href="logOut.html">Log Out</a></li>
+            <a class="btn" href="myCourses.html">My Courses</a></li>
             
 
             <form class="searchBtn" action="">
@@ -51,47 +52,35 @@
     
     <h3> <img src="images/avatar.png" class="container-two"><span>Name Surname</span></h3> <br>
     
-    <div class="container">
+    <div class="profileContainer">
 
-        <form>
-            <fieldset>
-            <span><label for="name"> Username:</label> <span></span>
-            <input type="text" placeholder="username" id="name" name="name"> <br><br> </span>
+      <div class="border">
 
-            <span><label for="email"> Email:</label> <span></span>
-            <input type="text" placeholder="email" id="email" name="email"> <br><br></span>
+        <table style="margin-left:auto; margin-right:auto; border-spacing: 70px 0; padding-left: 70px;">
+          <tr >
+            <td>Username: </td>
+            <td>  <input type="text" placeholder="username" id="name" name="name" style="width:200px;"></td>
+          </tr>  
+
+          <tr>
+            <td> Email:</td>
+            <td> <input type="text" placeholder="email" id="email" name="email" style="width:200px;"> </td>
+          </tr>
+
+          <tr>
+            <td> Password:</td>
             
-            <span><label for="password"> Password:</label> <span></span>
-            <input type="password" placeholder="**********" id="password" name="password"> <br><br></span>
+            <td> <input type="password" placeholder="**********" id="password" name="password" style="width:200px;"> </td>
+          </tr>
+          <tr>
             
-            <span><label for="phone"> Phone number:</label><span> </span>
-            <input type="tel" placeholder="(optional)" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br><br></span>
-
-    
-            <label for="bio"> <span> Bio:</label> <span></span>
-            <textarea id="bio" name="bio" rows="5" cols="33" >Tell us something about you. </textarea> <br><br>
-
-           <p> <span>Share your status:</p></span>
-           
-            <span><input type="checkbox" name="checkbox"/>Working </label> <br></span>
-            <span><input type="checkbox" name="checkbox"/>Away </label><br></span>
-            <span><input type="checkbox" name="checkbox"/>Focusing </label><br></span>
-
-            <a class="btn" href="editProfile.html">Edit Profile.</a>
-
-            
-            </fieldset>
-
-            
-
-        </form>
+        </table>
 
         
+        <a style="text-align: center;"  class="btn" href="submitChanges.html">Submit Changes.</a>
 
     </div>
 
-
-
-
 </body>
+    
     
