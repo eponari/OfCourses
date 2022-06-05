@@ -1,0 +1,152 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	line-height: 1.8em;
+	color: #5a5c5a;
+}
+
+
+.btn {
+    
+    background-color: #51087E;
+      border: 0.5px solid #51087E;
+      color: white;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 11px;
+      float: right;
+      margin-left: 20px;
+      margin:5px;
+      border-radius: 5px;
+    }
+
+.btn:hover {
+    background-color: rgb(187, 174, 189);
+}
+
+.btnExtra {
+    
+    background-color: rgb(253, 252, 254);
+      border: 1px solid #51087E;
+      color: #51087E;
+      padding: 3px 3px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      float: left;
+      margin-left: 20px;
+      margin:5px;
+      border-radius: 5px;
+}
+
+.btnExtra:hover {
+    background-color: rgb(187, 174, 189);
+}
+
+.button {
+    padding: 8px 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+    margin:5px;
+    border-radius: 5px;
+    font-weight: bold
+        
+}
+
+.searchBtn {
+    padding: 8px 9px;
+    float: left;
+    margin-left: 20px;
+    margin:5px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    width: 110px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(252, 252, 252);
+    border: 0.5px solid rgb(216, 210, 210);
+}
+
+.navbar:hover {
+    background-color: rgb(219, 215, 220);
+}
+
+h2 {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
+
+h4 { 
+    color:#51087E;
+    font-size: 16px;
+    padding-left: 70px;
+}
+
+
+h1, h2, h3, h6 {
+	padding-left: 70px;
+	color: #51087E;
+}
+
+.buttonExtra {
+    background-color: rgb(198, 198, 199);
+    border: 1px solid #51087E;
+    color: #51087E;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 13px;
+    margin:5px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+    position:relative; 
+
+}
+
+.buttonExtra:hover {background-color: #A58CB3}
+
+.buttonExtra:active {
+  background-color: #8e5a8b;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transform: translateY(4px);
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 70px 0;
+  }
+  
+  td {
+    padding: 10px 0;
+  }
+
+@media screen and (max-width: 750px) {
+    .navbar {position: fixed;}
+    
+    .searchBtn {
+        display: none;
+    }
+  }
+  
