@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+  session_start();
+
+  if(isset($_SESSION["type"])){
+    switch($_SESSION["type"]){
+      case 1:
+        header("Location: ../Student/Welcome.php");
+        break;
+      case 3:
+        header("Location: ../Administator/Welcome.php");
+        break;
+    }
+  }else{
+    header("Location: ../login.php");
+  }
+?>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -33,7 +50,7 @@
 ?>
 
 <body> 
-<?php
+    <?php
       include("../Utility/professorHeader.php");
     ?>
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
