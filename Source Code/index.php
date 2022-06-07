@@ -48,10 +48,6 @@
 
   <main id="main">
 
-       <h4> Explore trending courses below.
-        <br> <a class="buttonExtra" href="categories.html">Browse through categories.</a>
-       </h4>
-      
     
     <div class="flex-container">
 
