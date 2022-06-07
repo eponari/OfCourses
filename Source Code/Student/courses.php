@@ -19,32 +19,9 @@
 
 <body>
 
-
-
-  <!-- ======= Header ======= -->
-  
-      <div class="container">
-        <nav class="navbar">
-        <div class="container-fluid">
-          
-        
-            <a class="button" href="studentLanding.html">OfCourses</a>
-            <a class="btn" href="studentLanding.html">Home</a>
-            <a class="btn" href="studentAccount.html">My Account</a>
-            <a class="btn" href="logout.html">Log Out</a></li>
-
-            
-
-            <form class="searchBtn" action="">
-              <input type="text" placeholder="What are you looking for?" name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-         
-        </div>
-       
-      </div>
-    </nav>
-  </header><!-- End Header -->
+  <?php
+    include("../Utility/studentHeader.php");
+  ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
 

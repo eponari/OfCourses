@@ -33,38 +33,40 @@
   ?>
 
 
-  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+<div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
 
-    <img src="../images/image2.jpeg" class="container-three">
-    <h2> <span>Welcome to your account!</span></h2>
-    
-    <h3> <img src="../images/avatar.png" class="container-two"><span>Name Surname</span></h3> <br>
-    
-    <div class="container">
+<img src="../images/image2.jpeg" class="container-three">
+<h2> <span>Welcome to your account!</span></h2>
 
-        <form>
-            <fieldset>
-            <span><label for="name"> Username:</label> <span></span>
-            <input type="text" placeholder="username" id="name" name="name"> <br><br> </span>
+<h3> <img src="../images/avatar.png" class="container-two"><span>Name Surname</span></h3> <br>
 
-            <span><label for="email"> Email:</label> <span></span>
-            <input type="text" placeholder="email" id="email" name="email"> <br><br></span>
-            
-            <span><label for="password"> Password:</label> <span></span>
-            <input type="password" placeholder="**********" id="password" name="password"> <br><br></span>
-            
-            <a class="btn" href="editProfile.html">Edit Profile.</a>
+<div class="profileContainer">
 
-            
-            </fieldset>
+  <div class="border">
 
-            
+    <table style="margin-left:auto; margin-right:auto; border-spacing: 70px 0; padding-left: 70px;">
+      <tr >
+        <td>Full Name: </td>
+        <td>  <input type="text" placeholder="Full Name" id="name" name="name" style="width:200px;"></td>
+      </tr>  
 
-        </form>
+      <tr>
+        <td> Email:</td>
+        <td> <input type="text" placeholder="email" id="email" name="email" style="width:200px;"> </td>
+      </tr>
 
+      <tr>
+        <td> Password:</td>
         
+        <td> <input type="password" placeholder="**********" id="password" name="password" style="width:200px;"> </td>
+      </tr>
+      <tr>
+        
+    </table>
 
-    </div>
+    
+    <a style="text-align: center;"  class="btn" href="submitChanges.html">Submit Changes.</a>
+</div>
 
 
 

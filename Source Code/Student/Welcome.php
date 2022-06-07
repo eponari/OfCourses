@@ -1,9 +1,3 @@
-<?php
-    session_start();
-
-    echo "Welcome student {$_SESSION["fullName"]}"; 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +18,7 @@
 
 <body>
 
-<?php
+  <?php
     include("../Utility/studentHeader.php");
     include("../Controller/studentLanding.php");
   ?>
@@ -128,7 +122,7 @@
       <?php
       foreach ($courses as $courses) {?>
         <div class="borderElse">
-        <h4><a href="" class="stretched-link"><?php echo $courses['id']; echo "  "; echo $courses['name']?></a></h4>
+        <h4><a href="viewCourse.php" class="stretched-link"><?php echo $courses['id']; echo "  "; echo $courses['name']?></a></h4>
         <?php echo $courses['description'];?></p>
         <h5><br><?php echo "From: "; echo $courses['startDate'];?> <br> <h5> <?php echo "To: "; echo $courses['endDate']; ?> </h5>
         <a class="btnExtra" href="registerCourse.html">Register</a>
