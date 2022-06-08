@@ -21,17 +21,17 @@
 
   <?php
     include("../Utility/studentHeader.php");
+    include("../Controller/studentLanding.php");
   ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
   
     <img src="../images/image6.jpg" style="width:30%;"  class="container-three">
-    <h2 >  Computer Graphics Design. 
-        <p style="text-decoration: underline;"> Professor Vivian</p>
-        <p style="color: gray;"> Students enrolled: 90 </p>
+    <h2 >  <?php echo $course['id']; echo " "; echo $course['name']; ?> 
+        <p style="text-decoration: underline;"> <?php echo $fullName; ?></p>
+        <!-- <p style="color: gray;"> Students enrolled: <?php echo $enrolledStudents; ?> </p> -->
        
-        <br> <p style="color: black;"> Introduction to two-dimensional and three-dimensional graphics along 
-          with image processing. 
+        <br> <p style="color: black;"> <?php echo $course['id']; echo " "; echo $course['name'];  ?>
         </p>
     </h2>
   
@@ -41,18 +41,15 @@
         <div class="border">
           
           <h4><a href="" class="stretched-link">Course Description: </a></h4>
-         <p style="text-align:left; text-justify:inter-word;"> Computer Graphics Design combines technology and art by using computer generated images
-             also known as CGI and text to create concepts for publishing and advertising which portray different kinds of messages. 
-             Computer graphic designers, editors and animators use technology to manipulate and combine visual elements such as images with sound effects and words to illustrate
-             emotions and deliver them clearly to an audience.     </p>
+         <p style="text-align:left; text-justify:inter-word;"> <?php echo $courseDesc ?></p>
 
-         <h5> Key Skills: Artistic ability, creativity, analytical skills, communication skills, leadership, time-efficiency, computer skills.</h5>
+         <!-- <h5> Key Skills: Artistic ability, creativity, analytical skills, communication skills, leadership, time-efficiency, computer skills.</h5> -->
          
-         <h4><a href="" class="stretched-link">Course Objectives: </a></h4>
+         <!-- <h4><a href="" class="stretched-link">Course Objectives: </a></h4>
          <p style="text-align:left; text-justify:inter-word;"> This course introduces the basic concepts of Computer Graphics Design by providing the necessary theoretical material
              as well as enough practical applications connected with appropriate software programs which will make the workflow 
             process smoothly. Further on, this course aims to teach students the programming languages needed for the program along with demonstrative scripts 
-        and assignments which can be solved both creatively and experimentally. </p>
+        and assignments which can be solved both creatively and experimentally. </p> -->
 
         <p style="color: gray; text-align: left;"> Weeks 14: 14 </p>
         <h4><a href="" class="stretched-link">Lessons: </a></h4>

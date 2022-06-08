@@ -44,7 +44,7 @@
         public function getCurrentWeek(){
             $stmt = $this -> dbh -> prepare("SELECT weekNr, title from week w, course c where w.id = c.id");
             $stmt -> execute();
-            $week = $stmt ->fetch();
+            $week = $stmt ->fetchAll();
             return $week;
         }
 
@@ -66,9 +66,47 @@
 
 
         public function getGrade(){
-            $stmt = $this -> dbh -> prepare("SELECT avg(grade) from assignment, course");
-
+            $stmt = $this -> dbh -> prepare("SELECT avg(grade) from assignment a, course c where a.courseId = c.id");
+            $stmt -> execute();
+            $avg = $stmt ->fetchAll();
+            return $avg;
         }
+
+        public function getAllWeeks(){
+            $stmt = $this -> dbh -> prepare("SELECT * from week");
+            $stmt -> execute();
+            $weeks = $stmt -> fetchAll();
+            return $weeks;
+        }
+
+        public function getAllAssignments(){
+            $stmt = $this -> dbh -> prepare("SELECT * from assignment");
+            $stmt -> execute();
+            $assignments = $stmt -> fetchAll();
+            return $assignments;
+        }
+
+        public function getProfessorForCourse(){
+            $stmt = $this -> dbh -> prepare("SELECT fullName from user u, course c where u.type = 2 and u.email = c.professorEmail");
+            $stmt -> execute();
+            $name = $stmt -> fetchAll();
+            return $name;
+        }
+
+        // public function studentEnrolled(){
+        //     $stmt = $this -> dbh -> prepare("SELECT count(email) from user u, course c where u.type = 1 and u.email = c.email");
+        //     $stmt -> execute();
+        //     $nr = $stmt -> fetch();
+        //     return $nr;
+        // }
+
+        public function getCourseDescription(){
+            $stmt = $this -> dbh -> prepare("SELECT description from course");
+            $stmt -> execute();
+            $description = $stmt -> fetchAll();
+            return $description;
+        }
+
 
     }
 ?>

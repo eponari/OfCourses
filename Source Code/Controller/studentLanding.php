@@ -47,17 +47,61 @@
 
     if($status){
         foreach($status as $status){
-            
+            $status = $status['weekNr'];
         }
     }
 
     $grade = $coursesRepo -> getGrade();
 
-    if($grade){
-        foreach($grade as $grade){
+    // if($grade){
+    //     foreach($grade as $g){
+    //         $grade = $g['grade'];
+    //     }
+    // }
 
+    $weeks = $coursesRepo -> getAllWeeks();
+
+    if($weeks){
+        foreach($weeks as $w){
+            $title = $w['title'];
+            $nr = $w['weekNr'];
+            $courseId = $w['courseId'];
+            $id = $w['id'];
         }
     }
+
+
+    $assignment = $coursesRepo -> getAllAssignments();
+
+    if($assignment){
+        foreach($assignment as $a){
+            $id = $a['id'];
+            $weeknrs = $a['weekNr'];
+            $grade = $a['grade'];
+            $uploadDate = $a['uploadDate'];
+            $dueDate = $a['dueDate'];
+        }
+    }
+
+    $professor = $coursesRepo -> getProfessorForCourse();
+
+    if($professor){
+        foreach($professor as $p){
+            $fullName = $p['fullName'];
+        }
+    }
+
+    // $enrolledStudents = $coursesRepo -> studentEnrolled();
+
+    $courseDescription = $coursesRepo -> getCourseDescription();
+
+    if($courseDescription){
+        foreach($courseDescription as $cd){
+            $courseDesc = $cd['description'];
+        }
+    }
+
+
 
 
 ?>

@@ -36,7 +36,21 @@
 
               <h3> Choose your categories: </h3>
  
-                <div class="border">
+                
+              <?php
+                include("../Controller/studentCourses.php");
+                foreach ($categories as $category) {?>
+                  <div class="border">
+                    <label class = "form">
+                    <input type="checkbox" name = "checkbox"><a href="courses.php" class="stretched-link"><?php echo $category['category'];?></a></label>
+                  </div>
+                  <?php 
+                } 
+              ?>
+
+
+
+                <!-- <div class="border">
 
                   <label class="form"> 
                   <input type="checkbox" name="checkbox"/>Engineering </label>
@@ -106,7 +120,7 @@
                     <input type="checkbox" name="checkbox"/>Virtual Reality</label>
                     <label class="form"> <br>
                       <input type="checkbox" name="checkbox"/>Autonomous Robotics</label>
-                </div>
+                </div> -->
                 
               </div>
 

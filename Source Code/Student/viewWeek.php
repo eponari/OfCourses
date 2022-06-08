@@ -21,30 +21,45 @@
 
   <?php
     include("../Utility/studentHeader.php");
+    include("../Controller/studentLanding.php");
   ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
   
     <img src="../images/image7.jpg" style="width:30%; margin-top: 40px;"  class="container-three">
-    <h2 style="text-decoration:underline;" >  Week 1 </h2> 
+    <h2 style="text-decoration:underline;" > 
+    <?php 
+      foreach($weeks as $w){ 
+        echo "Week "; echo $w['weekNr'];
+      } ?></h2> 
 
     <div class="flex-container" style="width: 100%;">
 
         <div class="border">
           
           <h4><a href="" class="stretched-link">Lesson Title: </a></h4>
-         <p style="text-align:left; text-justify:inter-word; font-weight: bold;"> Introduction to Computer Graphics Design and its evolution.</p>
+         <p style="text-align:left; text-justify:inter-word; font-weight: bold;"><?php  
+          foreach($weeks as $w){
+            echo $w['title'];
+          } 
+          ?></p>
 
          </div>
 
          <div class="border">
-           <h4 style="border: 1.5px solid purple; padding:10px; width:30%; box-shadow:0 6px 13px rgba(78, 10, 91, 0.97);"><a href="" class="stretched-link">Assignment 1:  </a></h4>
-            <p style="text-align:left; text-justify:inter-word;"> For this first week, the assignment is to read through the lecture and 
-            take notes of the key points that the lesson makes. Your main task is to collect information on the concerning topic and 
-            write a research paper on one of the aspects of Computer Graphics Design which stands out the most to you. 
-            Reminder to stick to the layout of a research paper and guidelines and most importantly it has to be your own work.  </p>
+           <h4 style="border: 1.5px solid purple; padding:10px; width:30%; box-shadow:0 6px 13px rgba(78, 10, 91, 0.97);"><a href="" class="stretched-link"><?php
+            foreach($assignment as $a){
+              echo "Assignment "; echo $a['id'];
+            } ?></a></h4>
+            <p style="text-align:left; text-justify:inter-word;"> <?php 
+            foreach($assignment as $a){
+              echo "Upload Date: "; echo $a['uploadDate'];
+              echo "<br> Due Date: "; echo $a['dueDate'];
+            }
+            
+            ?> </p>
 
-            <h4><a href="" class="stretched-link">Slides and Homework Reference: </a></h4> 
+            <!-- <h4><a href="" class="stretched-link">Slides and Homework Reference: </a></h4>  -->
             <a  href="../Attachments/test_file.zip" download>Download File</a>
 
             <h4><a href="" class="stretched-link">Add attachment: </a></h4>
@@ -53,7 +68,12 @@
 
             <h4><a href="" class="stretched-link">Grade:  </p> </a></h4>
 
-            <p style="padding:10px; background-color: rgb(163, 163, 163); font-weight: bold;"> <span> /100 </span> </p>
+            <p style="padding:10px; background-color: rgb(163, 163, 163); font-weight: bold;"> <span>
+            <?php
+            foreach($assignment as $a){
+              echo $a['grade'];
+            }
+            ?> /100 </span> </p>
 
             <a  class="btnExtra" href="turnIn.html">Turn in.</a>
 

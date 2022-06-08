@@ -25,8 +25,8 @@
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
 
-    <img src="images/image3.jpg" class="container-three">
-    <h2> <img src="images/avatar.png" class="container-two"><span>Browse your courses!</span></span></h2>
+    <img src="../images/image3.jpg" class="container-three">
+    <h2> <img src="../images/avatar.png" class="container-two"><span>Browse your courses!</span></span></h2>
 
     <div class="main">
 
@@ -139,7 +139,7 @@
     <h4><a href="" class="stretched-link"><?php echo $courses['id']; echo " "; echo $courses['name']; ?></a> </h4>
 
     <?php 
-    echo "<p style='color: gray;'> Weeks 14: {$week['weekNr']}</p>";
+    echo "<p style='color: gray;'> Weeks 14: {$weekNumber['weekNr']}</p>";
     ?>
 
 
