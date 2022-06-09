@@ -6,6 +6,19 @@
             $this -> dbh = $conn;
         }
 
+        public function createCourse($email,$title,$description,$startDate,$endDate,$weeks){
+            $stmt = $this -> dbh -> prepare("INSERT INTO `course` (`name`, `description`, `professorEmail`, `startDate`, `endDate`) VALUES (?, ?, ?, ?, ?)");
+            $stmt -> execute([$title,$description,$email,$startDate,$endDate]);
+            $courseId = $this -> dbh -> lastInsertId();
+
+            for($i=1;$i<=$weeks;$i++){
+                $stmt = $this -> dbh -> prepare("INSERT INTO `week` (`weekNr`, `courseId`) VALUES (?, ?)");
+                $stmt -> execute([$i,$courseId]);
+            }
+
+            return $courseId;
+        }
+
         public function getAllCourses(){
             $stmt = $this -> dbh -> prepare("SELECT * from course");
             $stmt -> execute();

@@ -17,7 +17,7 @@
 
 <body>
 
-<?php
+  <?php
       include("../Utility/professorHeader.php");
     ?>
 
