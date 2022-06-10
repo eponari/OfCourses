@@ -19,6 +19,27 @@
             return $courseId;
         }
 
+        public function getCourseFromProfessor($email,$id){
+            $stmt = $this -> dbh -> prepare("SELECT * from course c,week w where w.courseId = c.id and c.id=? and c.professorEmail=?");
+            $stmt -> execute([$id,$email]);
+            $courses = $stmt -> fetchAll();
+            return $courses;
+        }
+
+        public function getWeeks($email,$id){
+            $stmt = $this -> dbh -> prepare("SELECT count(*) c from course c,week w where w.courseId = c.id and c.id=? and c.professorEmail=?");
+            $stmt -> execute([$id,$email]);
+            $courses = $stmt -> fetch();
+            return $courses["c"];
+        }
+
+        public function getEnrolled($email,$id){
+            $stmt = $this -> dbh -> prepare("SELECT count(*) c from course c,registered r where r.courseId = c.id and c.id=? and c.professorEmail=?");
+            $stmt -> execute([$id,$email]);
+            $courses = $stmt -> fetch();
+            return $courses["c"];
+        }
+
         public function getAllCourses(){
             $stmt = $this -> dbh -> prepare("SELECT * from course");
             $stmt -> execute();
