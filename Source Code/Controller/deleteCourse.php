@@ -8,13 +8,13 @@
             $courseRepository = new Course();
 
             $courseRepository->deleteCourse($_GET["id"]);
-            //header("Location: ../Professor/manageCourses.php");
+            header("Location: ../Professor/manageCourses.php");
         }else{
             echo "Error";
-            //header("Location: ../Student/welcome.php");
+            header("Location: ../Student/welcome.php");
         }
     }else{
         echo "Error";
-        //header("Location: ../index.php");    
+        header("Location: ../index.php");    
     }
 ?>

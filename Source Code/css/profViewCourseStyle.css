@@ -124,13 +124,25 @@ h1, h2, h3, h6 {
 }
 
 .flex-container > div {
-    height: 100px;
     box-shadow: 0 6px 13px rgb(0 0 0 / 0.2);
     background-color: rgb(226, 216, 230);
     margin: 10px;
     padding: 20px;
     font-size: 13px;
     color: black;
+}
+
+.btnExtra {
+      background-color: rgb(253, 252, 254);
+      border: 1px solid #51087E;
+      color: #51087E;
+      padding: 3px 3px;
+      font-size: 12px;
+      margin-left: 20px;
+      margin:5px;
+      border-radius: 5px;
+      align-self: center;
+      align-self: center;
 }
 
 .details-container {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 11:23 PM
+-- Generation Time: Jun 12, 2022 at 11:32 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -32,9 +32,9 @@ CREATE TABLE `assignment` (
   `uploadDate` date NOT NULL,
   `weekNr` int(11) NOT NULL,
   `courseId` int(11) NOT NULL,
-  `grade` int(11) NOT NULL,
-  `maxGrade` int(11) NOT NULL,
-  `id` int(11) NOT NULL
+  `description` varchar(200) NOT NULL,
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -50,18 +50,7 @@ CREATE TABLE `attachment` (
   `courseId` int(11) NOT NULL,
   `weekNr` int(11) NOT NULL,
   `assignmentId` int(11) DEFAULT NULL,
-  `id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
-
-CREATE TABLE `category` (
-  `courseId` int(11) NOT NULL,
-  `category` varchar(50) NOT NULL
+  `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -83,6 +72,9 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
+INSERT INTO `course` (`id`, `name`, `description`, `professorEmail`, `startDate`, `endDate`) VALUES
+(7, 'Parallel Programming', 'This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.', 'a@gmail.com', '2022-06-09', '2022-06-16');
+
 -- --------------------------------------------------------
 
 --
@@ -100,6 +92,9 @@ CREATE TABLE `question` (
 --
 -- Dumping data for table `question`
 --
+
+INSERT INTO `question` (`question`, `answer`, `qid`, `email`, `id`) VALUES
+('Hi?', '312', 0, 'xbano@gmail.com', 7);
 
 -- --------------------------------------------------------
 
@@ -175,6 +170,21 @@ CREATE TABLE `week` (
 -- Dumping data for table `week`
 --
 
+INSERT INTO `week` (`title`, `weekNr`, `courseId`) VALUES
+('', 1, 7),
+('', 2, 7),
+('', 3, 7),
+('', 4, 7),
+('', 5, 7),
+('', 6, 7),
+('', 7, 7),
+('', 8, 7),
+('', 9, 7),
+('', 10, 7),
+('', 11, 7),
+('', 12, 7),
+('', 13, 7);
+
 --
 -- Indexes for dumped tables
 --
@@ -190,7 +200,6 @@ ALTER TABLE `assignment`
 --
 ALTER TABLE `attachment`
   ADD PRIMARY KEY (`path`),
-  ADD KEY `id` (`id`),
   ADD KEY `weekNr` (`weekNr`,`courseId`);
 
 --
@@ -229,10 +238,22 @@ ALTER TABLE `week`
 --
 
 --
+-- AUTO_INCREMENT for table `assignment`
+--
+ALTER TABLE `assignment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `question`
+--
+ALTER TABLE `question`
+  MODIFY `qid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -242,14 +263,7 @@ ALTER TABLE `course`
 -- Constraints for table `attachment`
 --
 ALTER TABLE `attachment`
-  ADD CONSTRAINT `attachment_ibfk_1` FOREIGN KEY (`id`) REFERENCES `assignment` (`id`),
   ADD CONSTRAINT `attachment_ibfk_2` FOREIGN KEY (`weekNr`,`courseId`) REFERENCES `week` (`weekNr`, `courseId`);
-
---
--- Constraints for table `question`
---
-ALTER TABLE `question`
-  ADD CONSTRAINT `question_ibfk_1` FOREIGN KEY (`email`) REFERENCES `user` (`email`);
 
 --
 -- Constraints for table `takes`

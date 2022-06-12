@@ -1,26 +1,26 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	line-height: 1.8em;
-	color: #5a5c5a;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.8em;
+    color: #5a5c5a;
 }
 
 
 .btn {
-    
+
     background-color: #51087E;
-      border: 0.5px solid #51087E;
-      color: white;
-      padding: 5px 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 11px;
-      float: right;
-      margin-left: 20px;
-      margin:5px;
-      border-radius: 5px;
-    }
+    border: 0.5px solid #51087E;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    float: right;
+    margin-left: 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
 
 .btn:hover {
     background-color: rgb(187, 174, 189);
@@ -28,18 +28,18 @@ body {
 
 
 .btnExtra {
-    
+
     background-color: rgb(253, 252, 254);
-      border: 1px solid #51087E;
-      color: #51087E;
-      padding: 3px 30px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 12px;
-      float: left;
-      margin:5px;
-      border-radius: 5px;
-      align-content: center;
+    border: 1px solid #51087E;
+    color: #51087E;
+    padding: 3px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    float: left;
+    margin: 5px;
+    border-radius: 5px;
+    align-content: center;
 }
 
 .btnExtra:hover {
@@ -47,18 +47,18 @@ body {
 }
 
 .btnDelete {
-    
+
     background-color: rgb(253, 252, 254);
-      border: 1px solid #51087E;
-      color: #51087E;
-      padding: 3px 31px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 12px;
-      float: right;
-      margin:5px;
-      border-radius: 5px;
-      align-content: center;
+    border: 1px solid #51087E;
+    color: #51087E;
+    padding: 3px 31px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    float: right;
+    margin: 5px;
+    border-radius: 5px;
+    align-content: center;
 }
 
 .btnDelete:hover {
@@ -67,25 +67,24 @@ body {
 
 
 .button {
-    
+
     padding: 8px 9px;
     text-align: center;
     text-decoration: none;
     font-size: 30px;
     float: left;
     margin-left: 20px;
-    margin:5px;
+    margin: 5px;
     border-radius: 5px;
     font-weight: bold
-        
 }
 
 .searchBtn {
-    
+
     padding: 8px 9px;
     float: left;
     margin-left: 20px;
-    margin:5px;
+    margin: 5px;
     border-radius: 5px;
 }
 
@@ -93,12 +92,12 @@ input[type=text] {
     width: 200px;
     -webkit-transition: width 0.2s ease-in-out;
     transition: width 0.2s ease-in-out;
-  }
-  
-  /* When the input field gets focus, change its width to 100% */
-  input[type=text]:focus {
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
     width: 100%;
-  }
+}
 
 .navbar {
     position: fixed;
@@ -119,7 +118,7 @@ h2 {
     font-size: 30px;
     padding-top: 40px;
     text-align: center;
-    
+
 }
 
 p {
@@ -127,9 +126,9 @@ p {
 }
 
 
-h4 { 
+h4 {
     padding-top: 30px;
-    color:#51087E;
+    color: #51087E;
     text-align: center;
     font-size: 16px;
     padding-bottom: 10px;
@@ -137,9 +136,12 @@ h4 {
 
 
 
-h1, h2, h3, h6 {
-	padding-left: 10px;
-	color: #51087E;
+h1,
+h2,
+h3,
+h6 {
+    padding-left: 10px;
+    color: #51087E;
 }
 
 .flex-container {
@@ -154,7 +156,7 @@ h1, h2, h3, h6 {
     align-content: center;
 }
 
-.flex-container > div {
+.flex-container>div {
     box-shadow: 0 6px 13px rgb(0 0 0 / 0.2);
     background-color: rgb(226, 216, 230);
     margin: 10px;
@@ -162,7 +164,8 @@ h1, h2, h3, h6 {
     font-size: 13px;
     color: black;
 }
-.flex-container > .btnExtra{
+
+.flex-container>.btnExtra {
     left: 50%;
 }
 
@@ -176,9 +179,11 @@ h1, h2, h3, h6 {
 }
 
 @media screen and (max-width: 750px) {
-    .navbar {position: fixed;}
-    
+    .navbar {
+        position: fixed;
+    }
+
     .searchBtn {
         display: none;
     }
-  }
+}
