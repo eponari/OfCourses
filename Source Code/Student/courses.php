@@ -13,6 +13,7 @@
   <link href="../css/navbarStyle.css" rel="stylesheet">
   <link href="../css/studentStyle.css" rel="stylesheet">
   <link href="../css/studentCourseStyle.css" rel="stylesheet">
+  <link href="../css/profCoursesStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -28,6 +29,13 @@
     <img src="../images/image3.jpg" class="container-three">
     <h2> <img src="../images/avatar.png" class="container-two"><span>Browse your courses!</span></span></h2>
 
+    <?php
+    include("../Controller/getAllUnregisteredCourses.php");
+    ?>
+    <?php
+    include("../Controller/getAllRegisteredCourses.php");
+    ?>
+
     <div class="main">
 
 
@@ -37,56 +45,12 @@
           </h3>
 
             <div class="border">
-              
-              <?php
-              include("../Controller/studentLanding.php");
-                foreach($courses as $courses){ ?>
-                  <li><?php
-                  echo $courses['id'];
-                  echo " ";
-                  echo $courses['name'];
-                  echo "<br>";
-                  ?></li>
-                  <?php
-                }
-
-              ?>
-              
-
+            //
                   <!-- <li>Computer Graphics Design.</li>
                   <li>Digital Media and Mobile Applications.</li>
                   <li>Introduction basics to Cyber Security.</li>
-                  <li>Fundamentals of Data Strctures.</li> -->
-              
+                  <li>Fundamentals of Data Strctures.</li> --> 
             </div>
-
-            <br> <h3> <fieldset> Selected Tags: </fieldset>
-            </h3>
-
-            <div class="border">
-
-
-            <?php
-              include("../Controller/studentCourses.php");
-                foreach($categories as $category){ ?>
-                  <li><?php
-                  echo $category['category'];
-                  echo "<br>";
-                  ?></li>
-                  <?php
-                }
-
-              ?>
-                <!-- <label class="form"> 
-                <input type="checkbox" name="checkbox"/>Engineering </label><br>
-                <label class="form"> 
-                <input type="checkbox" name="checkbox"/>Computer Science</label><br>
-                <label class="form"> 
-                <input type="checkbox" name="checkbox"/>Computer Graphics</label><br>
-                <label class="form"> 
-                <input type="checkbox" name="checkbox"/>Information Technology</label><br> -->
-            </div>
-
 
 
             <h3> <br> <fieldset>  Ask the Professor! </fieldset>
@@ -94,29 +58,17 @@
 
 
             <div class="border">
-              
-             <br><h1> Which course do you want to ask about? </h1>
+              <h1> Which course do you want to ask about? </h1>
 
              <br> <label for="subjects">Choose a subject:</label>
 
-             <select name="subject" id="subject">  
-             <?php
-             // include("..Controller/studentLanding.php");
-              foreach($courseName as $courses){?>
-                <option>
-                  <?php echo $courses['id']; echo " "; echo $courses['name']; ?>
-                </option>
-                <?php
-              }   
-              ?>
-             <!-- <option>Computer Graphics Design</option>
-                <option>Digital Media and Mobile Applications</option>
-                <option>Introduction basics to Cyber Security</option>
-                <option>Fundamentals of Data Structures</option> -->
-            </select> 
+             <select name="subject" id="subject">
+             
+            </select>  <br>
+
 
             
-            <label for="bio"> <span></label> <span></span>
+            <label for="bio">Ask the question: <span></label> <span></span><bR>
             <textarea id="bio" name="bio" rows="17" cols="40" >Ask something here... </textarea> <br><br>
             
             <a class="btn" href="submitQuestion.html">Submit</a>

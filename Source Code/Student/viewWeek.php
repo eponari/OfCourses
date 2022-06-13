@@ -78,12 +78,4 @@
             <a  class="btnExtra" href="turnIn.html">Turn in.</a>
 
          </div>
-
-        
-
-        
-
-
-
-
   </div>

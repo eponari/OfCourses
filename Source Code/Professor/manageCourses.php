@@ -29,7 +29,7 @@
             <h4> <a class="buttonExtra" href="addCourse.php">Add New Course</a>
             </h4>
 
-            <?php
+    <?php
       include("../Controller/getProfessorCourses.php");
-      ?>
+    ?>
 </body>
