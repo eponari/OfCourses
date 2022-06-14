@@ -16,7 +16,7 @@
 <body>
     <?php
       include("../Utility/professorHeader.php");
-  ?>
+    ?>
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
         data-aos="zoom-out">
 

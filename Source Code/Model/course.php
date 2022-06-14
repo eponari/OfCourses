@@ -19,6 +19,13 @@
             return $courseId;
         }
 
+        public function getEnrolledNumber($id){
+            $stmt = $this -> dbh -> prepare("SELECT count(*) result from course c,registered r where r.courseId = c.id and c.id=?");
+            $stmt -> execute([$id]);
+            $courses = $stmt -> fetch();
+            return $courses["result"];
+        }
+
         public function enrollStudent($id,$email){
             $stmt = $this -> dbh -> prepare("INSERT INTO REGISTERED VALUES (?, ?)");
             $stmt -> execute([$id,$email]);
@@ -31,6 +38,13 @@
 
         public function getCourseFromProfessor($email,$id){
             $stmt = $this -> dbh -> prepare("SELECT * from course c,week w where w.courseId = c.id and c.id=? and c.professorEmail=?");
+            $stmt -> execute([$id,$email]);
+            $courses = $stmt -> fetchAll();
+            return $courses;
+        }
+
+        public function getCourseFromStudent($email,$id){
+            $stmt = $this -> dbh -> prepare("SELECT * from course c,week w,registered r where r.courseId=w.courseId and w.courseId = c.id and c.id=? and r.email=?");
             $stmt -> execute([$id,$email]);
             $courses = $stmt -> fetchAll();
             return $courses;
@@ -52,7 +66,7 @@
                 return array();
             }
 
-            $stmt = $this -> dbh -> prepare("SELECT course.*,count(*) cnt,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status  from course,registered where courseId=id and  email=?");
+            $stmt = $this -> dbh -> prepare("SELECT *,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status  from course,registered where id=courseId and email=?");
             $stmt -> execute([$email]);
             $courses = $stmt -> fetchAll();
             
@@ -68,7 +82,7 @@
                 return array();
             }
 
-            $stmt = $this -> dbh -> prepare("SELECT course.*,count(*) cnt,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status  from course where id not in (select courseId from registered where email=?)");
+            $stmt = $this -> dbh -> prepare("SELECT *,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status from course where id not in (select courseId from registered where email=?)");
             $stmt -> execute([$email]);
             $courses = $stmt -> fetchAll();
             
@@ -82,6 +96,8 @@
             return $courses;
         }
 
+        
+
         public function getProfessorCourses($email){
             $stmt = $this -> dbh -> prepare("SELECT count(*) result from course where professorEmail=?");
             $stmt -> execute([$email]);
@@ -91,7 +107,7 @@
                 return array();
             }
 
-            $stmt = $this -> dbh -> prepare("SELECT course.*,count(*) cnt,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status  from course,registered where professorEmail=?");
+            $stmt = $this -> dbh -> prepare("SELECT * ,CASE when startDate > CURDATE() then 'Upcoming' when endDate > CURDATE() then 'Completed' ELSE 'Ongoing' END status  from course where professorEmail=?");
             $stmt -> execute([$email]);
             $courses = $stmt -> fetchAll();
             

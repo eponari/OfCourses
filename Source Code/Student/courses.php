@@ -12,7 +12,7 @@
   <!-- Template Main CSS File -->
   <link href="../css/navbarStyle.css" rel="stylesheet">
   <link href="../css/studentStyle.css" rel="stylesheet">
-  <link href="../css/studentCourseStyle.css" rel="stylesheet">
+  <!-- <link href="../css/studentCourseStyle.css" rel="stylesheet"> -->
   <link href="../css/profCoursesStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,33 +29,18 @@
     <img src="../images/image3.jpg" class="container-three">
     <h2> <img src="../images/avatar.png" class="container-two"><span>Browse your courses!</span></span></h2>
 
+    <div style="display: flex;flex-direction: row;">
     <?php
     include("../Controller/getAllUnregisteredCourses.php");
     ?>
+    <br>
     <?php
     include("../Controller/getAllRegisteredCourses.php");
     ?>
-
+    </div>
     <div class="main">
 
-
         <div class="flex-container">
-
-          <h3> <fieldset> Selected Courses: </fieldset>
-          </h3>
-
-            <div class="border">
-            //
-                  <!-- <li>Computer Graphics Design.</li>
-                  <li>Digital Media and Mobile Applications.</li>
-                  <li>Introduction basics to Cyber Security.</li>
-                  <li>Fundamentals of Data Strctures.</li> --> 
-            </div>
-
-
-            <h3> <br> <fieldset>  Ask the Professor! </fieldset>
-            </h3>
-
 
             <div class="border">
               <h1> Which course do you want to ask about? </h1>
