@@ -21,7 +21,6 @@
 
   <?php
     include("../Utility/studentHeader.php");
-    include("../Controller/studentLanding.php");
   ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">

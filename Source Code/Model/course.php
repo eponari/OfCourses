@@ -50,9 +50,9 @@
             return $courses;
         }
 
-        public function getWeeks($email,$id){
-            $stmt = $this -> dbh -> prepare("SELECT count(*) c from course c,week w where w.courseId = c.id and c.id=? and c.professorEmail=?");
-            $stmt -> execute([$id,$email]);
+        public function getWeeks($id){
+            $stmt = $this -> dbh -> prepare("SELECT count(*) c from course c,week w where w.courseId = c.id and c.id=?");
+            $stmt -> execute([$id]);
             $courses = $stmt -> fetch();
             return $courses["c"];
         }

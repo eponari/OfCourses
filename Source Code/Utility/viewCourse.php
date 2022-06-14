@@ -24,9 +24,9 @@
         <h2> <?php echo $course[0]["name"] ?> </h2>
         <h4>
             <br><br>
-            Number of enrolled students: <?php echo $courseRepo->getEnrolledNumber($_SESSION["email"],$_GET["courseId"]); ?>
+            Number of enrolled students: <?php echo $courseRepo->getEnrolledNumber($_GET["courseId"]); ?>
             <br>
-            Number of weeks: <?php echo $courseRepo->getWeeks($_SESSION["email"],$_GET["courseId"]); ?>
+            Number of weeks: <?php echo $courseRepo->getWeeks($_GET["courseId"]); ?>
         </h4>
         </section>
         <main id="main">
