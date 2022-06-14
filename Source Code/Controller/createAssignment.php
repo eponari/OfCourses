@@ -18,5 +18,5 @@
 
         $attachmentRepo->createAttachmentForAssignment($file,$_POST["courseId"],$_POST["weekNr"],$_POST["title"].$i,$type,$assignmentId);
     }    
-    header("Location: ../Professor/viewCourse.php?courseId={$_POST["courseId"]}&weekNr={$_POST["weekNr"]}");
+    header("Location: ../Utility/viewCourse.php?courseId={$_POST["courseId"]}&weekNr={$_POST["weekNr"]}");
 ?>

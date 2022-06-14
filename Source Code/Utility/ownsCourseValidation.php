@@ -10,10 +10,11 @@
 
       $courseRepo = new Course();
 
-      if($_SESSION["type"] == 2){
-        $course = $courseRepo->getCourseFromProfessor($_SESSION["email"],$_GET["courseId"]);
-      }else{
+      if($_SESSION["type"]==1){
         $course = $courseRepo->getCourseFromStudent($_SESSION["email"],$_GET["courseId"]);
+      }
+      else{
+        $course = $courseRepo->getCourseFromProfessor($_SESSION["email"],$_GET["courseId"]);
       }
       
       if(!$course){

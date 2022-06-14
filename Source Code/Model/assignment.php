@@ -13,10 +13,17 @@
             return $assignmentId;
         }
 
-        public function getAssignments($weekNr,$courseId){
-            $stmt = $this -> dbh -> prepare("SELECT title,path from assignment WHERE courseID = ? and weekNr=?");
+        public function getAssignments($courseId,$weekNr){
+            $stmt = $this -> dbh -> prepare("SELECT * from assignment WHERE courseID = ? and weekNr=?");
             $stmt -> execute([$courseId,$weekNr]);
             $assignments = $stmt -> fetchAll();
+            return $assignments;
+        }
+
+        public function getAssignment($assignmentId){
+            $stmt = $this -> dbh -> prepare("SELECT * from assignment WHERE id=?");
+            $stmt -> execute([$assignmentId]);
+            $assignments = $stmt -> fetch();
             return $assignments;
         }
     }

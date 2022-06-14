@@ -6,6 +6,11 @@
             $this->dbh = $conn;
         }
 
+        public function createQuestion($question,$email,$id){
+            $stmt = $this->dbh->prepare("INSERT INTO `question` (`question`, `answer`, `email`, `id`) VALUES (?, NULL, ?, ?)");
+            $stmt->execute([$question,$email,$id]);
+        }
+
         public function getQuestions($email) {
             $stmt = $this->dbh->prepare("SELECT q.qid qid,(select fullName from user where email=q.email) userName,c.name courseName,q.question question,q.answer answer FROM question q,user u,course c where q.id = c.id and u.email = c.professorEmail and c.professorEmail=? order by q.answer");
             $stmt->execute([$email]);
