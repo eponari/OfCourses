@@ -25,6 +25,8 @@
       include("../Utility/studentHeader.php");
     }else if ($_SESSION["type"]==2){
       include("../Utility/professorHeader.php");
+    }else if ($_SESSION["type"]==3){
+      include("../Utility/administatorHeader.php");
     }else{
       session_destroy();
       header("Location: ../index.php");
