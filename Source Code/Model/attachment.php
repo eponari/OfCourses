@@ -23,5 +23,12 @@
             $attachemnts = $stmt -> fetchAll();
             return $attachemnts;
         }
+
+        public function getAttachmentsForAssignment($id){
+            $stmt = $this -> dbh -> prepare("SELECT title,path,type from attachment WHERE assignmentId=?");
+            $stmt -> execute([$id]);
+            $attachemnts = $stmt -> fetchAll();
+            return $attachemnts;
+        }
     }
 ?>

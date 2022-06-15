@@ -28,74 +28,72 @@
         <?php echo $assignment["description"]?>
       </h4>
 
-      <h4> Attachment: <br>
-        <a href="url" style="color: #51087E; text-align: center">CEN352 Homework 1 (2021-2022).pdf</a> </h4>
+      <h4> Attachments: <br>
 
-      <br>
-      <table style="padding-left:10px;">
-        <tr>
-          <th style="color: #51087E;">Student </th>
-          <th style="color: #51087E;">Submission</th>
-          <th style="color: #51087E;">Grade</th>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Vanessa Ives </td>
-          <td><a href="url" style="color: #51087E; text-align: center">VIves_HW1.pdf</a></td>
-          <td><input type="number" value="87" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Faye Wong </td>
-          <td><a href="url" style="color: #51087E; text-align: center">FayeWong1.pdf</a></td>
-          <td><input type="number" value="100" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Lorela Gjoni </td>
-          <td><a href="url" style="color: #51087E; text-align: center">LorelaGj_Homework.pdf</a></td>
-          <td><input type="number" value="93" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Mason Jar </td>
-          <td><a href="url" style="color: #51087E; text-align: center">MasonJar_1.pdf</a></td>
-          <td><input type="number" value="98" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Bruna Gomez </td>
-          <td><a href="url" style="color: #51087E; text-align: center">BG_Homework1.pdf</a></td>
-          <td><input type="number" value="88" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Stephanie Stile </td>
-          <td><a href="url" style="color: #51087E; text-align: center">SStile_Homework1.pdf</a></td>
-          <td><input type="number" value="75" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Peggy Lee </td>
-          <td><a href="url" style="color: #51087E; text-align: center">PeggyLee_HW1.pdf</a></td>
-          <td><input type="number" value="70" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td style="width:200px; color: #51087E; text-align: center;"> Layla Dae </td>
-          <td><a href="url" style="color: #51087E; text-align: center">LaylaDae_hw1.pdf</a></td>
-          <td><input type="number" value="83" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <!-- <td><input type="text" value="Henry Jekyll" style="width:200px; color: #51087E; text-align: center;"> </td> -->
-          <td style="width:200px; color: #51087E; text-align: center;"> Henry Jekyll </td>
-          <!-- <td><input type="text" value="HenryJekyll_HW1" style="width:200px; color: #51087E; text-align: center;"></td> -->
-          <td><a href="url" style="color: #51087E; text-align: center">HenryJekyll_HW1.pdf</a></td>
-          <td><input type="number" value="95" step="1" max="100" style="width:200px; color: #51087E; text-align: center;"></td>
-        </tr>
-        <tr>
-          <td><input type="submit" id="addRow" value="Add Student Submission" style="color:#51087E; font-family: sans-serif;"> </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table> 
+      <?php
+        include("../Model/attachment.php");
 
-      <br>
-      <h4> <a class="buttonExtra">Add Assignment</a></h4>
+        $attachmentRepo = new Attachment();
 
-      
+        $attachments = $attachmentRepo->getAttachmentsForAssignment($assignment["id"]);
+
+        foreach($attachments as $attachment){
+          echo "<a href='{$attachment['path']}' download='{$attachment['title']}.{$attachment['type']}' class='stretched-link' style='margin-right: 15px;'>{$attachment['title']}</a>";
+        }
+      ?>
+
+      <?php
+        
+
+        if($_SESSION["type"]==1){
+          include("../Model/submission.php");
+
+          $submissionRepo = new Submission();
+
+          $submission = $submissionRepo->getSubmission($assignment["id"],$_SESSION["email"]);
+
+          if(!$submission){
+            echo "<br><br>
+            <form method='POST' action='../Controller/submitAssignment.php' enctype='multipart/form-data'>
+            Solution file: <input type='file' name='userFile' required><br>
+            <input type='hidden' name='assignmentId' value='{$assignment["id"]}'>
+            <input type='submit' value='Submit'>
+            </form>
+          ";
+          }else{
+            $grade = !$submission["grade"]?"-":$submission["grade"];
+            echo "<br><br>Your grade: {$grade}";
+          }
+        }else{
+          include("../Model/submission.php");
+
+          $submissionRepo = new Submission();
+
+          $submissions = $submissionRepo->getSubmissions($assignment["id"]);
+
+          echo '<br><br><table style="padding-left:10px;">
+          <tr>
+            <th style="color: #51087E;">Student </th>
+            <th style="color: #51087E;">Submission</th>
+            <th style="color: #51087E;">Grade</th>
+          </tr>';
+
+          foreach($submissions as $submission){
+            $grade = !$submission["grade"]?0:$submission["grade"];
+            echo "<tr>
+              <td style='width:200px; color: #51087E; text-align: center;'> {$submission['fullName']} </td>
+              <td><a href='{$submission['path']}' download='{$submission['path']}' style='color: #51087E; text-align: center'>{$submission['path']}</a></td>
+              <form method='POST' action='../Controller/updateGrade.php'>
+              <td><input type='number' name='grade' value='$grade' step='1' max='100' style='width:200px; color: #51087E; text-align: center;'></td>
+              <input type='hidden' name='assignmentId' value='{$assignment["id"]}'>
+              <input type='hidden' name='path' value='{$submission["path"]}'>
+              <td><input type='submit' value='OK' style='width:200px; color: #51087E; text-align: center;'></td>
+              </form>
+            </tr>";
+          }
+        }
+
+      ?>      
   <main id="main">
 
   </body>

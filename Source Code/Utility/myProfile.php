@@ -43,16 +43,11 @@
 <div class="profileContainer">
 
   <div class="border">
-
+    <form action='updateProfile.php' method='POST'>
     <table style="margin-left:auto; margin-right:auto; border-spacing: 70px 0; padding-left: 70px;">
       <tr >
         <td>Full Name: </td>
         <td>  <input type="text" placeholder="Full Name" id="name" name="name" style="width:200px;"></td>
-      </tr>  
-
-      <tr>
-        <td> Email:</td>
-        <td> <input type="text" placeholder="email" id="email" name="email" style="width:200px;"> </td>
       </tr>
 
       <tr>
@@ -66,6 +61,7 @@
 
     
     <a style="text-align: center;"  class="btn" href="submitChanges.html">Submit Changes.</a>
+  </form>
 </div>
 
 

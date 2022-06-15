@@ -31,17 +31,13 @@
             $stmt = $this->dbh->prepare($query);
             $stmt->execute([$name, $email, $hashed_pass, $type]);
         }
-        // public function updateData($username, $email, $password, $phone, $bio, $status){
-        //     try{
-        //         global $conn;
-        //         $sql = "UPDATE user SET username = ?, email = ?, password = ?, phone = ?, bio = ?, status = ?";
-        //         $statement = $conn -> prepare($sql);
-        //         $statement -> execute([$username, $email, $password, $phone, $bio, $status]);
-        //     }
-        //     catch (PDOException $ex){
-        //         echo $ex -> getMessage().'<br>';
-        //     }
-        // }
+
+        public function updateUser($name,$password, $email){
+            $hashed_pass = password_hash($password,PASSWORD_BCRYPT);
+
+            $statement = $conn -> prepare("UPDATE user set fullname=? and password=? where email=?");
+            $statement -> execute([$name,$hashed_pass, $email]);
+        }
     }
 
 ?>
