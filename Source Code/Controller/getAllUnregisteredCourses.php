@@ -1,5 +1,4 @@
 <?php
-
         include("../Model/course.php");
 
         $courseRepository = new Course();

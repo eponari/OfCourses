@@ -1,4 +1,12 @@
 <?php
+    include("../Utility/professorHeader.php");
+    include("../Utility/validateInput.php");
+
+    if(!validateInputs($_POST["answer"],$_POST["qid"])){
+        echo "<script>history.back()</script>";
+        exit();
+    }
+
     session_start();
     
     if(isset($_POST["answer"]) and isset($_POST["qid"])){

@@ -14,7 +14,7 @@
         if($_SESSION["type"]==2){
           echo "<h4>
           <form>
-            <input type='text' name='title' style='width:300px' value='{$title}'>
+            <input type='text' name='title' style='width:300px' value='{$title}' required>
             <input type='submit' value='Okay' style='padding-right:8px'>
           </form>";
         }else{
@@ -53,7 +53,7 @@
       <h2> What do you want to ask four professor? </h2>
       <label for='bio'>Ask the question: <span></label> <span></span><bR>
       <form action='../Controller/askQuestion.php' method='POST'> 
-      <textarea id='question' name='question' rows='17' cols='40' ></textarea> <br>
+      <textarea id='question' name='question' rows='17' cols='40' required></textarea> <br>
       <input type='hidden' name='email' value='{$_SESSION['email']}'>
       <input type='hidden' name='id' value='{$week['id']}'>
       <input type='submit' value='Submit'>

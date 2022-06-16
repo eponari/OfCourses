@@ -7,6 +7,7 @@
 
     <title>View Course</title>
     <meta content="" name="description">
+    <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
     <meta content="" name="keywords">
 
     <link href="../css/profViewCourseStyle.css" rel="stylesheet">
@@ -17,6 +18,13 @@
 <body>
     <?php
       include("../Utility/ownsCourseValidation.php");
+
+      include("../Utility/validateInput.php");
+
+      if(!validateInputs($_GET["courseId"])){
+            echo "<script>history.back()</script>";
+            exit();
+      }
     ?>
     <img src="../images/profCourseImage.png" class="container-one">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"

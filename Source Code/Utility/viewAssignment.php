@@ -7,6 +7,7 @@
 
   <title>Assignments</title>
   <meta content="" name="description">
+  <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
   <meta content="" name="keywords">
 
   <!-- Template Main CSS File -->
@@ -84,7 +85,7 @@
               <td style='width:200px; color: #51087E; text-align: center;'> {$submission['fullName']} </td>
               <td><a href='{$submission['path']}' download='{$submission['path']}' style='color: #51087E; text-align: center'>{$submission['path']}</a></td>
               <form method='POST' action='../Controller/updateGrade.php'>
-              <td><input type='number' name='grade' value='$grade' step='1' max='100' style='width:200px; color: #51087E; text-align: center;'></td>
+              <td><input type='number' name='grade' value='$grade' step='1' max='100' style='width:200px; color: #51087E; text-align: center;' required></td>
               <input type='hidden' name='assignmentId' value='{$assignment["id"]}'>
               <input type='hidden' name='path' value='{$submission["path"]}'>
               <td><input type='submit' value='OK' style='width:200px; color: #51087E; text-align: center;'></td>

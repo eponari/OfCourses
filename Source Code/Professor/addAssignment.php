@@ -7,6 +7,7 @@
     <title>Assignments</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
     <link href="../css/profAssignmentStyle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,6 +15,13 @@
 <body>
     <?php
       include("../Utility/professorHeader.php");
+
+      include("../Utility/validateInput.php");
+
+      if(!validateInputs($_GET["courseId"],$_GET["weekNr"])){
+            echo "<script>history.back()</script>";
+            exit();
+      }
   ?>
 
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
@@ -31,7 +39,7 @@
 
             <h4>Assignment Description:</h4>
             <h4>
-                <textarea class="textarea" id="textarea" name="description" rows="5" cols="60" maxlength="100"
+                <textarea class="textarea" id="textarea" name="description" rows="5" cols="60"
                     minlength="3" placeholder="What is the assignment about?" style="color: #51087E; font-family: sans-serif; 
             font-size:11pt;" required></textarea>
                 <br>

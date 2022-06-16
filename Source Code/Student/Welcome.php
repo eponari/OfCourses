@@ -14,6 +14,7 @@
   <link href="../css/studentStyle.css" rel="stylesheet">
   <link href="../css/professorStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
 
 </head>
 
@@ -21,6 +22,13 @@
 
   <?php
     include("../Utility/studentHeader.php");
+
+    include("../Utility/validateInput.php");
+
+      if(!validateInputs($_SESSION["fullName"])){
+            echo "<script>history.back()</script>";
+            exit();
+      }
   ?>
 
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">

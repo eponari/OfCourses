@@ -5,6 +5,13 @@
         $message = "";
         $clean = array();
         
+        include("../Utility/validateInput.php");
+
+        if(!validateInputs($_POST["name"],$_POST["email"],$_POST["type"],$_POST["password"])){
+            echo "<script>history.back()</script>";
+            exit();
+        }
+
         $userRepository = new User();
 
         if(isset($_POST["name"])){

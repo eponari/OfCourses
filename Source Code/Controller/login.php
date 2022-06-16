@@ -1,4 +1,11 @@
 <?php
+    include("../Utility/validateInput.php");
+
+    if(!validateInputs($_POST["submit"],$_POST["email"],$_POST["password"])){
+        echo "<script>history.back()</script>";
+        exit();
+    }
+
     if(isset($_POST["submit"])){
         include("../Model/User.php");
 

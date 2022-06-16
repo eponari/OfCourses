@@ -1,5 +1,14 @@
 <?php
+    include("../Utility/studentHeader.php");
     session_start();
+
+    include("../Utility/validateInput.php");
+
+    if(!validateInputs($_FILES['userFile'],$_POST["assignmentId"])){
+        echo "<script>history.back()</script>";
+        exit();
+    }
+
     include("../Model/submission.php");
 
     $submissionRepo = new Submission();

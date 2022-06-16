@@ -27,6 +27,7 @@
             <a class="btn" href="../Utility/myProfile.php">My Profile</a></li>
             <a class="btn" href="../Administator/validateCourses.php">Validate Courses</a></li>
             <a class="btn" href="../Administator/validateProfessors.php">Validate Professors</a></li>
+            <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
                      
         </div>
     </nav>

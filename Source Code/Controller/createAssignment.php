@@ -1,6 +1,14 @@
 <?php
+    include("../Utility/professorHeader.php");
     include("../Model/assignment.php");
     include("../Model/attachment.php");
+
+    include("../Utility/validateInput.php");
+
+    if(!validateInputs($_FILES['uploadedFiles'],$_POST["due"],$_POST["weekNr"],$_POST["courseId"],$_POST["description"],$_POST["title"])){
+        echo "<script>history.back()</script>";
+        exit();
+    }
 
     $total = count($_FILES['uploadedFiles']['name']);
 

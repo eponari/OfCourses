@@ -10,9 +10,9 @@
             <h1>Login Here</h1>
             <form action="Controller/login.php" method="POST">
                 <p>Email</p>
-                <input type="text" name="email" placeholder="Enter Email">
+                <input type="text" name="email" placeholder="Enter Email" required>
                 <p>Password</p>
-                <input type="password" name="password" placeholder="Enter Password">
+                <input type="password" name="password" placeholder="Enter Password" required>
                 <input type="submit" name="submit" value="Login">
                 <!-- <a href="#">Lost your password?</a><br> -->
                 <a href="signup.php">Don't have an account?</a>

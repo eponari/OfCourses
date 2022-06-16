@@ -11,12 +11,19 @@
 
     <!-- Template Main CSS File -->
     <link href="../css/profAttachmentStyle.css" rel="stylesheet">
+    <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <?php
       include("../Utility/ownsCourseValidation.php");
+      include("../Utility/validateInput.php");
+
+      if(!validateInputs($_GET["courseId"],$_GET["weekNr"])){
+            echo "<script>history.back()</script>";
+            exit();
+      }
     ?>
 
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"

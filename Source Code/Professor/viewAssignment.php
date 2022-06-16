@@ -8,6 +8,7 @@
   <title>Assignments</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
 
   <!-- Template Main CSS File -->
   <link href="../css/profAssignmentStyle.css" rel="stylesheet">

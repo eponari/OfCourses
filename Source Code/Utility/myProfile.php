@@ -14,6 +14,7 @@
   <link href="../css/studentStyle.css" rel="stylesheet">
   <link href="../css/studentAccStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="https://github.com/eponari/OfCourses/blob/main/projectLogo.jpg?raw=true">
 
 </head>
 
@@ -49,13 +50,13 @@
     <table style="margin-left:auto; margin-right:auto; border-spacing: 70px 0; padding-left: 70px;">
       <tr >
         <td>Full Name: </td>
-        <td>  <input type="text" placeholder="Full Name" id="name" name="name" style="width:200px;"></td>
+        <td>  <input type="text" placeholder="Full Name" id="name" name="name" style="width:200px;" required></td>
       </tr>
 
       <tr>
         <td> Password:</td>
         
-        <td> <input type="password" placeholder="**********" id="password" name="password" style="width:200px;"> </td>
+        <td> <input type="password" placeholder="**********" id="password" name="password" style="width:200px;" required> </td>
       </tr>
       <tr>
         

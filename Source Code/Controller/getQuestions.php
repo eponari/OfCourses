@@ -15,7 +15,7 @@ foreach($questions as $question){
     echo "<form action=\"../Controller/answerQuestion.php\" method=\"POST\">
     <div class=\"textarea_style\">
       <textarea class=\"textarea\" id=\"textarea\" name=\"answer\" rows=\"5\" cols=\"60\"
-      maxlength=\"100\" minlength=\"3\" placeholder=\"Write your answer here...\"></textarea>
+      minlength=\"3\" placeholder=\"Write your answer here...\" required></textarea>
       </div>
       <input type='hidden' name = 'qid' value='{$question['qid']}'>
       <input type = 'submit' class=\"btnExtra\">

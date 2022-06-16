@@ -19,6 +19,18 @@
             return $courseId;
         }
 
+        public function getAllUnverifiedCourses(){
+            $stmt = $this -> dbh -> prepare("SELECT c.*,u.fullname from course c,user u where c.verified is null and email=professorEmail");
+            $stmt -> execute([]);
+            $courses = $stmt -> fetchAll();
+            return $courses;
+        }
+
+        public function updateStatus($id){
+            $stmt = $this -> dbh -> prepare("UPDATE course set verified=1 where id=?");
+            $stmt -> execute([$id]);
+        }
+
         public function getEnrolledNumber($id){
             $stmt = $this -> dbh -> prepare("SELECT count(*) result from course c,registered r where r.courseId = c.id and c.id=?");
             $stmt -> execute([$id]);
