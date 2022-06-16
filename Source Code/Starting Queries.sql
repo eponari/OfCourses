@@ -41,10 +41,6 @@ CREATE TABLE `assignment` (
 -- Dumping data for table `assignment`
 --
 
-INSERT INTO `assignment` (`dueDate`, `uploadDate`, `weekNr`, `courseId`, `description`, `id`, `title`) VALUES
-('2022-07-08', '2022-06-14', 1, 7, 'fasfsfsafsafasfsfsafsafasfsfsafsafasfsfsafsafasfsfsafsa', 4, 'HW1'),
-('2022-06-25', '2022-06-14', 1, 8, '321', 5, 'GWE');
-
 -- --------------------------------------------------------
 
 --
@@ -64,17 +60,6 @@ CREATE TABLE `attachment` (
 --
 -- Dumping data for table `attachment`
 --
-
-INSERT INTO `attachment` (`title`, `path`, `uploadDate`, `courseId`, `weekNr`, `assignmentId`, `type`) VALUES
-('GWE0', '../Attachments/GWE01655228882.png', '2022-06-14', 8, 1, 5, 'png'),
-('HW10', '../Attachments/HW101655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('HW11', '../Attachments/HW111655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('HW12', '../Attachments/HW121655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('Somthing0', '../Attachments/Somthing01655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing1', '../Attachments/Somthing11655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing2', '../Attachments/Somthing21655189545.sql', '2022-06-14', 7, 1, NULL, 'sql'),
-('Somthing3', '../Attachments/Somthing31655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing4', '../Attachments/Somthing41655189545.sql', '2022-06-14', 7, 1, NULL, 'sql');
 
 -- --------------------------------------------------------
 
@@ -96,9 +81,6 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`id`, `name`, `description`, `professorEmail`, `startDate`, `endDate`, `verified`) VALUES
-(7, 'Parallel Programming', 'This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.', 'a@gmail.com', '2022-06-09', '2022-06-16', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -117,10 +99,6 @@ CREATE TABLE `question` (
 -- Dumping data for table `question`
 --
 
-INSERT INTO `question` (`question`, `answer`, `qid`, `email`, `id`) VALUES
-('Hi?', '312', 0, 'xbano@gmail.com', 7),
-('What?\r\n', NULL, 1, 'e@gmail.com', 7),
-('What?\r\n', NULL, 2, 'e@gmail.com', 7);
 
 -- --------------------------------------------------------
 
@@ -137,9 +115,6 @@ CREATE TABLE `registered` (
 -- Dumping data for table `registered`
 --
 
-INSERT INTO `registered` (`courseId`, `email`) VALUES
-('0', 'eponari19@epoka.edu.al'),
-('7', 'e@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -159,9 +134,6 @@ CREATE TABLE `submission` (
 -- Dumping data for table `submission`
 --
 
-INSERT INTO `submission` (`email`, `assignmentId`, `handledDate`, `grade`, `path`) VALUES
-('e@gmail.com', 4, '2022-06-15', 32, '../Attachments/41655326320.jpeg');
-
 -- --------------------------------------------------------
 
 --
@@ -180,19 +152,6 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`email`, `fullName`, `password`, `type`, `verified`) VALUES
-('3213@gmail.com', 'Edison Ponari', '$2y$10$faM2T2Z0pL3IlRJnCiJb2eQGoZRoNaZLRQUz6AFIjDUmK6YkiqYwC', 2, NULL),
-('3213@hotmail.com', 'Edison Ponari', '$2y$10$GiqR4Hjo625mPRwM8/ZWrObr/NDLv49QtiuabDniCnAlGMnXnh8ey', 1, NULL),
-('a@gmail.com', 'Ari Gjerazi', '$2y$10$f2A6afnnLzGLc94WQxEEJOOaEGxXNY0BA9QhvjUry9fzkOMWjhqoS', 2, NULL),
-('aaa@gmail.com', 'Ari', '$2y$10$QW.YGi72KBbqNVUxPMOVBOzJa7p7b6TVCHcxQmpWxV0lCdHwDHChu', 2, NULL),
-('admin@gmail.com', 'admin', '$2y$10$UrVq5WG3ww4cVmSSm7DwK.F9ow.bCgi7uMHrWBOvbsWQveNPzy0nS', 3, NULL),
-('b@gmail.com', 'Edison Ponari', '$2y$10$vgmwV6vcUvu4mVxM/bkkBO./urRdBwy325ELzioo8X4WenXQelQDq', 1, NULL),
-('e@gmail.com', 'edi', '$2y$10$4loqTr9f.OF.HXX.sNwDJe13hoOl40J9GaRPXut4kmWiHy9iTFcqu', 1, NULL),
-('edi.edison01@hotmail.com', 'Edison Ponari', '$2y$10$TDP55lWF2bT5DmMlWDdHZenUFj8impToLzsOj7o5ZioNGliDS8You', 1, NULL),
-('edisonedisonedison@hotmail.com', 'zhila', '$2y$10$r9K79c9TBodkYzYvJwWpEeK7GYCXe8GlPpgioKANxUCRnpopSM0bu', 1, NULL),
-('eponari19@epoka.edu.al', 'Edison Ponari', '$2y$10$0WD4jMnd4fihwrb0e9ZAWeUyTPuy3ylaBM4deZwYIjXOyfn9ZwY6.', 1, NULL),
-('salonarber@gmail.com', 'Edison Ponari', '$2y$10$ftulRYvf1gNwfiZZF0I3cOMvtoFKLe6TFLh/RnZbkxG31Wa/Trz9m', 1, NULL),
-('xbano@gmail.com', 'Klodiana', '$2y$10$NMA.CgoYtVawvP9A3/E0XeXVeh1Z.uV2psnK/lRoqlFF9LDSOAgta', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -209,26 +168,6 @@ CREATE TABLE `week` (
 --
 -- Dumping data for table `week`
 --
-
-INSERT INTO `week` (`title`, `weekNr`, `courseId`) VALUES
-('', 1, 7),
-('', 1, 8),
-('', 2, 7),
-('', 2, 8),
-('', 3, 7),
-('', 3, 8),
-('', 4, 7),
-('', 4, 8),
-('', 5, 7),
-('', 5, 8),
-('', 6, 7),
-('', 7, 7),
-('', 8, 7),
-('', 9, 7),
-('', 10, 7),
-('', 11, 7),
-('', 12, 7),
-('', 13, 7);
 
 --
 -- Indexes for dumped tables
