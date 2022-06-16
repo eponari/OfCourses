@@ -23,7 +23,7 @@
         
             <a class="button" href="welcome.php">OfCourses</a>
            
-            <a class="btn" href="../Utility/logOut.php">Log Out</a></li>
+            <a class="btn" href="../Utility/logout.php">Log Out</a></li>
             <a class="btn" href="../Utility/myProfile.php">My Profile</a></li>
             <a class="btn" href="../Administator/validateCourses.php">Validate Courses</a></li>
             <a class="btn" href="../Administator/validateProfessors.php">Validate Professors</a></li>

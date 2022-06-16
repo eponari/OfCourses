@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2022 at 11:53 PM
+-- Generation Time: Jun 16, 2022 at 11:41 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -97,8 +97,7 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id`, `name`, `description`, `professorEmail`, `startDate`, `endDate`, `verified`) VALUES
-(7, 'Parallel Programming', 'This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.', 'a@gmail.com', '2022-06-09', '2022-06-16', NULL),
-(8, 'SWE', 'SWEWSSEWEWSEWE', 'a@gmail.com', '2022-05-31', '2022-06-30', NULL);
+(7, 'Parallel Programming', 'This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.', 'a@gmail.com', '2022-06-09', '2022-06-16', 1);
 
 -- --------------------------------------------------------
 
@@ -187,6 +186,7 @@ INSERT INTO `user` (`email`, `fullName`, `password`, `type`, `verified`) VALUES
 ('a@gmail.com', 'Ari Gjerazi', '$2y$10$f2A6afnnLzGLc94WQxEEJOOaEGxXNY0BA9QhvjUry9fzkOMWjhqoS', 2, NULL),
 ('aaa@gmail.com', 'Ari', '$2y$10$QW.YGi72KBbqNVUxPMOVBOzJa7p7b6TVCHcxQmpWxV0lCdHwDHChu', 2, NULL),
 ('admin@gmail.com', 'admin', '$2y$10$UrVq5WG3ww4cVmSSm7DwK.F9ow.bCgi7uMHrWBOvbsWQveNPzy0nS', 3, NULL),
+('b@gmail.com', 'Edison Ponari', '$2y$10$vgmwV6vcUvu4mVxM/bkkBO./urRdBwy325ELzioo8X4WenXQelQDq', 1, NULL),
 ('e@gmail.com', 'edi', '$2y$10$4loqTr9f.OF.HXX.sNwDJe13hoOl40J9GaRPXut4kmWiHy9iTFcqu', 1, NULL),
 ('edi.edison01@hotmail.com', 'Edison Ponari', '$2y$10$TDP55lWF2bT5DmMlWDdHZenUFj8impToLzsOj7o5ZioNGliDS8You', 1, NULL),
 ('edisonedisonedison@hotmail.com', 'zhila', '$2y$10$r9K79c9TBodkYzYvJwWpEeK7GYCXe8GlPpgioKANxUCRnpopSM0bu', 1, NULL),

@@ -22,5 +22,5 @@
 
         $attachmentRepo->createAttachment($file,$_POST["courseId"],$_POST["weekNr"],$_POST["fileTitle"].$i,$type);
     }    
-    header("Location: ../Professor/viewCourse.php?courseId={$_POST["courseId"]}&weekNr={$_POST["weekNr"]}");
+    header("Location: ../Utility/viewCourse.php?courseId={$_POST["courseId"]}&weekNr={$_POST["weekNr"]}");
 ?>

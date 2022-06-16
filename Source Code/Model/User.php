@@ -35,7 +35,7 @@
         public function updateUser($name,$password, $email){
             $hashed_pass = password_hash($password,PASSWORD_BCRYPT);
 
-            $statement = $conn -> prepare("UPDATE user set fullname=? and password=? where email=?");
+            $statement = $this->dbh->prepare("UPDATE user set fullname=? and password=? where email=?");
             $statement -> execute([$name,$hashed_pass, $email]);
         }
     }

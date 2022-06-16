@@ -7,6 +7,9 @@
         exit();
     }
 
+    $_POST["answer"] = htmlentities($_POST["answer"]);
+    $_POST["qid"] = htmlentities($_POST["qid"]);
+
     session_start();
     
     if(isset($_POST["answer"]) and isset($_POST["qid"])){

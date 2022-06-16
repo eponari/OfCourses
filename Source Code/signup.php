@@ -30,7 +30,6 @@
                 <input type="submit" name="submit" value="Signup">
                 
                 <a href="login.php">Already have an account?</a>
-
             </form>
 
         </div>

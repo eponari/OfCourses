@@ -71,10 +71,10 @@
 
             switch($clean["type"]){
                 case 1:
-                    header("Location: ../Student/Welcome.php");
+                    header("Location: ../Student/welcome.php");
                     break;
                 case 2:
-                    header("Location: ../Professor/Welcome.php");
+                    header("Location: ../Professor/welcome.php");
                     break;
             }
         }else{
