@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 11:41 PM
+-- Generation Time: Jun 17, 2022 at 01:29 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -37,14 +37,6 @@ CREATE TABLE `assignment` (
   `title` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `assignment`
---
-
-INSERT INTO `assignment` (`dueDate`, `uploadDate`, `weekNr`, `courseId`, `description`, `id`, `title`) VALUES
-('2022-07-08', '2022-06-14', 1, 7, 'fasfsfsafsafasfsfsafsafasfsfsafsafasfsfsafsafasfsfsafsa', 4, 'HW1'),
-('2022-06-25', '2022-06-14', 1, 8, '321', 5, 'GWE');
-
 -- --------------------------------------------------------
 
 --
@@ -60,21 +52,6 @@ CREATE TABLE `attachment` (
   `assignmentId` int(11) DEFAULT NULL,
   `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `attachment`
---
-
-INSERT INTO `attachment` (`title`, `path`, `uploadDate`, `courseId`, `weekNr`, `assignmentId`, `type`) VALUES
-('GWE0', '../Attachments/GWE01655228882.png', '2022-06-14', 8, 1, 5, 'png'),
-('HW10', '../Attachments/HW101655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('HW11', '../Attachments/HW111655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('HW12', '../Attachments/HW121655227695.png', '2022-06-14', 7, 1, 4, 'png'),
-('Somthing0', '../Attachments/Somthing01655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing1', '../Attachments/Somthing11655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing2', '../Attachments/Somthing21655189545.sql', '2022-06-14', 7, 1, NULL, 'sql'),
-('Somthing3', '../Attachments/Somthing31655189545.pdf', '2022-06-14', 7, 1, NULL, 'pdf'),
-('Somthing4', '../Attachments/Somthing41655189545.sql', '2022-06-14', 7, 1, NULL, 'sql');
 
 -- --------------------------------------------------------
 
@@ -112,15 +89,6 @@ CREATE TABLE `question` (
   `email` varchar(100) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `question`
---
-
-INSERT INTO `question` (`question`, `answer`, `qid`, `email`, `id`) VALUES
-('Hi?', '312', 0, 'xbano@gmail.com', 7),
-('What?\r\n', NULL, 1, 'e@gmail.com', 7),
-('What?\r\n', NULL, 2, 'e@gmail.com', 7);
 
 -- --------------------------------------------------------
 
@@ -181,18 +149,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `fullName`, `password`, `type`, `verified`) VALUES
-('3213@gmail.com', 'Edison Ponari', '$2y$10$faM2T2Z0pL3IlRJnCiJb2eQGoZRoNaZLRQUz6AFIjDUmK6YkiqYwC', 2, NULL),
-('3213@hotmail.com', 'Edison Ponari', '$2y$10$GiqR4Hjo625mPRwM8/ZWrObr/NDLv49QtiuabDniCnAlGMnXnh8ey', 1, NULL),
 ('a@gmail.com', 'Ari Gjerazi', '$2y$10$f2A6afnnLzGLc94WQxEEJOOaEGxXNY0BA9QhvjUry9fzkOMWjhqoS', 2, NULL),
-('aaa@gmail.com', 'Ari', '$2y$10$QW.YGi72KBbqNVUxPMOVBOzJa7p7b6TVCHcxQmpWxV0lCdHwDHChu', 2, NULL),
 ('admin@gmail.com', 'admin', '$2y$10$UrVq5WG3ww4cVmSSm7DwK.F9ow.bCgi7uMHrWBOvbsWQveNPzy0nS', 3, NULL),
-('b@gmail.com', 'Edison Ponari', '$2y$10$vgmwV6vcUvu4mVxM/bkkBO./urRdBwy325ELzioo8X4WenXQelQDq', 1, NULL),
-('e@gmail.com', 'edi', '$2y$10$4loqTr9f.OF.HXX.sNwDJe13hoOl40J9GaRPXut4kmWiHy9iTFcqu', 1, NULL),
-('edi.edison01@hotmail.com', 'Edison Ponari', '$2y$10$TDP55lWF2bT5DmMlWDdHZenUFj8impToLzsOj7o5ZioNGliDS8You', 1, NULL),
-('edisonedisonedison@hotmail.com', 'zhila', '$2y$10$r9K79c9TBodkYzYvJwWpEeK7GYCXe8GlPpgioKANxUCRnpopSM0bu', 1, NULL),
-('eponari19@epoka.edu.al', 'Edison Ponari', '$2y$10$0WD4jMnd4fihwrb0e9ZAWeUyTPuy3ylaBM4deZwYIjXOyfn9ZwY6.', 1, NULL),
-('salonarber@gmail.com', 'Edison Ponari', '$2y$10$ftulRYvf1gNwfiZZF0I3cOMvtoFKLe6TFLh/RnZbkxG31Wa/Trz9m', 1, NULL),
-('xbano@gmail.com', 'Klodiana', '$2y$10$NMA.CgoYtVawvP9A3/E0XeXVeh1Z.uV2psnK/lRoqlFF9LDSOAgta', 1, NULL);
+('professor@gmail.com', 'Professor', '$2y$10$P4MCZKdmzMT5sStdQ8xG/.9pKRKTQcl0oGZZonanlVbXcQEpRml0W', 2, NULL),
+('student@gmail.com', 'Student', '$2y$10$bZaqfbcW75H59.j.hXj2ieQHEdHVL9G4GrFpiKhrBVHcuYm0xhgBW', 1, NULL);
 
 -- --------------------------------------------------------
 
