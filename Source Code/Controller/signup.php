@@ -41,8 +41,7 @@
 
         if(isset($_POST["type"])){
             if($_POST["type"]!=""){
-                //$clean["type"] = htmlentities($_POST["type"]);
-                $clean["type"] = 3;
+                $clean["type"] = htmlentities($_POST["type"]);
             }else{
                 $message += "Type is empty!<br>";
             }
