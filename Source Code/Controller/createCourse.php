@@ -8,6 +8,11 @@
         echo "<script>history.back()</script>";
         exit();
     }
+
+    $_POST["description"] = htmlentities($_POST["description"]);
+    $_POST["title"] = htmlentities($_POST["title"]);
+    $_POST["startDate"] = htmlentities($_POST["startDate"]);
+    $_POST["endDate"] = htmlentities($_POST["endDate"]);
     
     if(isset($_POST["weeks"]) and isset($_POST["description"]) and isset($_POST["title"]) and isset($_POST["startDate"]) and isset($_POST["endDate"])){
         $weeks = $_POST["weeks"];

@@ -10,6 +10,12 @@
         exit();
     }
 
+    $_POST["due"] = htmlentities($_POST["due"]);
+    $_POST["weekNr"] = htmlentities($_POST["weekNr"]);
+    $_POST["courseId"] = htmlentities($_POST["courseId"]);
+    $_POST["description"] = htmlentities($_POST["description"]);
+    $_POST["title"] = htmlentities($_POST["title"]);
+
     $total = count($_FILES['uploadedFiles']['name']);
 
     $assignmentRepo = new Assignment();

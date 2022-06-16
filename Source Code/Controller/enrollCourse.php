@@ -9,6 +9,8 @@
         exit();
     }
 
+    $_GET["id"] = htmlentities($_GET["id"]);
+
     $courseRepository = new Course();
 
     $courseRepository->enrollStudent($_GET["id"],$_SESSION["email"]);

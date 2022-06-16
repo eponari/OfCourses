@@ -9,6 +9,10 @@
         exit();
     }
 
+    $_POST["courseId"] = htmlentities($_POST["courseId"]);
+    $_POST["weekNr"] = htmlentities($_POST["weekNr"]);
+    $_POST["fileTitle"] = htmlentities($_POST["fileTitle"]);
+
     $total = count($_FILES['uploadedFiles']['name']);
 
     $attachmentRepo = new Attachment();
