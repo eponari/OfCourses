@@ -39,12 +39,12 @@
         }
 
         public function enrollStudent($id,$email){
-            $stmt = $this -> dbh -> prepare("INSERT INTO REGISTERED VALUES (?, ?)");
+            $stmt = $this -> dbh -> prepare("INSERT INTO registered VALUES (?, ?)");
             $stmt -> execute([$id,$email]);
         }
 
         public function unenrollStudent($id,$email){
-            $stmt = $this -> dbh -> prepare("DELETE FROM REGISTERED WHERE courseId=? and email=?");
+            $stmt = $this -> dbh -> prepare("DELETE FROM registered WHERE courseId=? and email=?");
             $stmt -> execute([$id,$email]);
         }
 

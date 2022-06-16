@@ -18,7 +18,7 @@
 
 
         public function getAttachments($weekNr,$courseId){
-            $stmt = $this -> dbh -> prepare("SELECT title,path,type from attachment WHERE courseID = ? and weekNr=?");
+            $stmt = $this -> dbh -> prepare("SELECT title,path,type from attachment WHERE courseID = ? and weekNr=? and assignmentId is null");
             $stmt -> execute([$courseId,$weekNr]);
             $attachemnts = $stmt -> fetchAll();
             return $attachemnts;

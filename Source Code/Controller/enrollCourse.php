@@ -1,6 +1,5 @@
 <?php
     include("../Utility/studentHeader.php");
-    session_start();
     include("../Model/course.php");
 
     include("../Utility/validateInput.php");
