@@ -37,6 +37,13 @@ CREATE TABLE `assignment` (
   `title` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `assignment`
+--
+
+>>>>>>> 97701b809c857040a22992ef1f81db100cc9f036
 -- --------------------------------------------------------
 
 --
@@ -53,6 +60,13 @@ CREATE TABLE `attachment` (
   `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `attachment`
+--
+
+>>>>>>> 97701b809c857040a22992ef1f81db100cc9f036
 -- --------------------------------------------------------
 
 --
@@ -73,9 +87,6 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`id`, `name`, `description`, `professorEmail`, `startDate`, `endDate`, `verified`) VALUES
-(7, 'Parallel Programming', 'This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.This is a course given at Epoka University.', 'a@gmail.com', '2022-06-09', '2022-06-16', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -90,6 +101,14 @@ CREATE TABLE `question` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `question`
+--
+
+
+>>>>>>> 97701b809c857040a22992ef1f81db100cc9f036
 -- --------------------------------------------------------
 
 --
@@ -105,9 +124,6 @@ CREATE TABLE `registered` (
 -- Dumping data for table `registered`
 --
 
-INSERT INTO `registered` (`courseId`, `email`) VALUES
-('0', 'eponari19@epoka.edu.al'),
-('7', 'e@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -127,9 +143,6 @@ CREATE TABLE `submission` (
 -- Dumping data for table `submission`
 --
 
-INSERT INTO `submission` (`email`, `assignmentId`, `handledDate`, `grade`, `path`) VALUES
-('e@gmail.com', 4, '2022-06-15', 32, '../Attachments/41655326320.jpeg');
-
 -- --------------------------------------------------------
 
 --
@@ -148,11 +161,14 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
+<<<<<<< HEAD
 INSERT INTO `user` (`email`, `fullName`, `password`, `type`, `verified`) VALUES
 ('a@gmail.com', 'Ari Gjerazi', '$2y$10$f2A6afnnLzGLc94WQxEEJOOaEGxXNY0BA9QhvjUry9fzkOMWjhqoS', 2, NULL),
 ('admin@gmail.com', 'admin', '$2y$10$UrVq5WG3ww4cVmSSm7DwK.F9ow.bCgi7uMHrWBOvbsWQveNPzy0nS', 3, NULL),
 ('professor@gmail.com', 'Professor', '$2y$10$P4MCZKdmzMT5sStdQ8xG/.9pKRKTQcl0oGZZonanlVbXcQEpRml0W', 2, NULL),
 ('student@gmail.com', 'Student', '$2y$10$bZaqfbcW75H59.j.hXj2ieQHEdHVL9G4GrFpiKhrBVHcuYm0xhgBW', 1, NULL);
+=======
+>>>>>>> 97701b809c857040a22992ef1f81db100cc9f036
 
 -- --------------------------------------------------------
 
@@ -169,26 +185,6 @@ CREATE TABLE `week` (
 --
 -- Dumping data for table `week`
 --
-
-INSERT INTO `week` (`title`, `weekNr`, `courseId`) VALUES
-('', 1, 7),
-('', 1, 8),
-('', 2, 7),
-('', 2, 8),
-('', 3, 7),
-('', 3, 8),
-('', 4, 7),
-('', 4, 8),
-('', 5, 7),
-('', 5, 8),
-('', 6, 7),
-('', 7, 7),
-('', 8, 7),
-('', 9, 7),
-('', 10, 7),
-('', 11, 7),
-('', 12, 7),
-('', 13, 7);
 
 --
 -- Indexes for dumped tables
