@@ -10,6 +10,8 @@ if(!validateInputs($_GET["id"])){
 	exit();
 }
 
+$_GET["id"] = htmlentities($_GET["id"]);
+
     $courseRepository = new Course();
 
     $courseRepository->unenrollStudent($_GET["id"],$_SESSION["email"]);

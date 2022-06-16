@@ -9,6 +9,8 @@
         exit();
     }
 
+    $_POST["assignmentId"] = htmlentities($_POST["assignmentId"]);
+
     include("../Model/submission.php");
 
     $submissionRepo = new Submission();

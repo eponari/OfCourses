@@ -10,6 +10,10 @@
         exit();
     }
 
+    $_POST["assignmentId"] = htmlentities($_POST["assignmentId"]);
+    $_POST["path"] = htmlentities($_POST["path"]);
+    $_POST["grade"] = htmlentities($_POST["grade"]);
+
     $submissionRepo = new Submission();
 
     $submissionRepo->upgradeGrade($_POST["assignmentId"],$_POST["path"],$_POST["grade"]);

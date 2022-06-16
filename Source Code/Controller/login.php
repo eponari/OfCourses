@@ -6,6 +6,9 @@
         exit();
     }
 
+    $_POST["email"] = htmlentities($_POST["email"]);
+    $_POST["password"] = htmlentities($_POST["password"]);
+
     if(isset($_POST["submit"])){
         include("../Model/User.php");
 

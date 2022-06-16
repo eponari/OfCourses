@@ -9,6 +9,9 @@ if(!validateInputs($_POST['submit'],$_POST['username'],$_POST['password'])){
 	exit();
 }
 
+$_POST['username'] = htmlentities($_POST['username']);
+$_POST['password'] = htmlentities($_POST['password']);
+
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
         $error = "Username or Password is invalid";

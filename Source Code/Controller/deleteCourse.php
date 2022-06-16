@@ -8,6 +8,8 @@
         exit();
     }
 
+    $_GET["id"] = htmlentities($_GET["id"]);
+
     if($_SESSION["type"] == 2 || $_SESSION["type"] == 3){
         if(isset($_GET["id"])){
             include("../Model/course.php");

@@ -22,6 +22,9 @@
             echo "<script>history.back()</script>";
             exit();
       }
+
+      $_GET["courseId"] = htmlentities($_GET["courseId"]);
+      $_GET["weekNr"] = htmlentities($_GET["weekNr"]);
   ?>
 
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"

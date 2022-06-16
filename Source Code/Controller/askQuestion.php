@@ -12,6 +12,9 @@
         exit();
     }
 
+    $_POST["question"] = htmlentities($_POST["question"]);
+    $_POST["id"] = htmlentities($_POST["id"]);
+
     $questionRepo->createQuestion($_POST["question"],$_SESSION["email"],$_POST["id"]);
 
     header("Location: ../Utility/viewCourse.php?courseId={$_POST['id']}");

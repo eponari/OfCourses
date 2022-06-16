@@ -9,6 +9,8 @@
         exit();
     }
 
+    $_GET['id'] = htmlentities($_GET['id']);
+
     $courseRepo = new Course();
 
     $courseRepo->updateStatus($_GET['id']);

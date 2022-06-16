@@ -10,6 +10,9 @@
         exit();
     }
 
+    $_POST["name"] = htmlentities($_POST["name"]);
+    $_POST["password"] = htmlentities($_POST["password"]);
+
     $userRepository = new User();
 
     $userRepository->updateUser($_POST["name"],$_POST["password"],$_SESSION["email"]);
